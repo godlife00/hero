@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="월가히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="월가히어로">
+    <!-- <meta property="og:image" content="favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://월가히어로">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">    
+
+    <div id="wrap">
+        <div id="header" class="header">
+            <!-- 헤더 타입 2 (ex 종목추천 등) -->
+            <div class="ninja-btn navToggle" title="menu">
+                <a class="menu-trigger btn_hamburger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="headerTop">
+                <a href="" class="home"><img src="../img/icon_home@2x.png" alt="홈으로 가기"></a>
+                <h1 class="headerLogo"><a href="">월가히어로</a>
+                </h1>
+                <div class="hm">
+                    <a href="../search/searching.html" class="go_sch"><img src="../img/icon_search@2x.png" alt="검색하기"
+                            searchbtn=""></a>
+                </div> <!-- //hm -->
+
+            </div>
+            <!-- //headerTop -->
+
+            <!-- 검색결과 요약 -->
+            <div class="schSummary navFixed">
+                <!--  //검색창 상단고정 class = navFixed -->
+                <h2 class="headerLogo"><a href="">월가히어로</a></h2>
+                <span>Alphabet</span>
+                <a href=""><span>검색</span></a>
+            </div>
+            <!-- //검색결과 요약 -->
+
+            <!--메뉴전체 판넬 -->
+            <div class="panel left">
+                <h3 class="panel_title">월가히어로</h3>
+                <!-- 메뉴의 내용부분 -->
+                <ul class="menu">
+                    <li><a href="">종목추천</a></li>
+                    <li><a href="">종목분석</a></li>
+                    <li><a href="">전종목 투자매력도</a></li>
+                    <li><a href="">투자레시피</a></li>
+                    <li><a href="">대가의 종목</a></li>
+                    <li><a href="">미국주식 탐구생활</a></li>
+                </ul>
+
+                <div class="btm">
+                    <ul>
+                        <li><a href=""><i class="panel_alarm"><img src="../img/icon_alarm@2x.png" alt=""> <strong
+                                        class="alarm_dot">확인안함</strong> </i> 알림</a></li>
+                        <li><a href=""><i class="panel_home"><img src="../img/icon_home@2x.png" alt=""></i> 서비스소개</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--메뉴전체 판넬 -->
+
+            <!--메뉴 밖에 어두워지는 부분-->
+            <div class="panel-overlay"></div>
+        </div>
+
+        <!-- 종목추천 class = sub_recom-->
+        <div id="container" class="sub_recom">
+            <!-- 주요 콘텐츠 -->
+            <div class="sub_top">
+                <div class="swiper-container swiper-slideChar">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="chart_area">
+                                <div class="chartData left_area">
+                                    <h2 class="title" title="Microsoft Corp"><a href="#">월트디즈니</a></h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">MSFT</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">154.53</li>
+                                        <li class="per">
+                                            <span class="increase">+0.84%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+
+                                    <div id="containerS1_1" class="containerS1"></div><!-- 종목추천 id = containerS1 -->
+                                </div>
+                                <!-- //chartData -->
+
+                                <div class="right_area">
+                                    <!--  수익률(추천가-현재가 수익%) 표시 -->
+                                    <div class="revenue_box" style="display: none;">
+                                        <span class="title"><i></i> 수익률</span>
+                                        <span class="percent"><i></i> 10.23%</span>
+                                    </div>
+                                    <!-- //수익률(추천가-현재가 수익%) 표시 -->
+
+                                    <!-- 목표가 달성시 -->
+                                    <div class="attainment_box">
+                                        <span class="title"><i></i> 목표가달성</span>
+                                        <span class="percent"><i></i> 10.23%</span>
+                                    </div>
+                                    <!-- //목표가 달성시 -->
+                                    <table cellspacing="0" border="1" class="tableRanking data_attainment">
+                                        <colgroup>
+                                            <col width="60px">
+                                            <col width="">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="goal"><span>목표가</span></th>
+                                                <td class="goal_num"><span>157,344</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="goal"><span>추천가</span></th>
+                                                <td class="goal_num"><span>157,344</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>PER(배)</span></th>
+                                                <td class=""><span>174</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>PBR(배</span></th>
+                                                <td class=""><span>15,474</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>ROE(%)</span></th>
+                                                <td class=""><span>17,344</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //chart_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="chart_area">
+                                <div class="chartData left_area">
+                                    <h2 class="title" title="Microsoft Corp"><a href="#">월트디즈니</a></h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">MSFT</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">154.53</li>
+                                        <li class="per">
+                                            <span class="increase">+0.84%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+
+                                    <div id="containerS1_2" class="containerS1"></div><!-- 종목추천 id = containerS1 -->
+                                </div>
+                                <!-- //chartData -->
+
+                                <div class="right_area">
+                                    <!--  수익률(추천가-현재가 수익%) 표시 -->
+                                    <div class="revenue_box">
+                                        <span class="title"><i></i> 수익률</span>
+                                        <span class="percent"><i></i> 10.23%</span>
+                                    </div>
+                                    <!-- //수익률(추천가-현재가 수익%) 표시 -->
+
+                                    <!-- 목표가 달성시 -->
+                                    <div class="attainment_box" style="display: none;">
+                                        <span class="title"><i></i> 목표가달성</span>
+                                        <span class="percent"><i></i> 10.23%</span>
+                                    </div>
+                                    <!-- //목표가 달성시 -->
+                                    <table cellspacing="0" border="1" class="tableRanking data_attainment">
+                                        <colgroup>
+                                            <col width="60px">
+                                            <col width="">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="goal"><span>목표가</span></th>
+                                                <td class="goal_num"><span>157,344</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="goal"><span>추천가</span></th>
+                                                <td class="goal_num"><span>157,344</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>PER(배)</span></th>
+                                                <td class=""><span>174</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>PBR(배</span></th>
+                                                <td class=""><span>15,474</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>ROE(%)</span></th>
+                                                <td class=""><span>17,344</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //chart_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="chart_area">
+                                <div class="chartData left_area">
+                                    <h2 class="title" title="Microsoft Corp"><a href="#">월트디즈니</a></h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">MSFT</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">154.53</li>
+                                        <li class="per">
+                                            <span class="increase">+0.84%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+
+                                    <div id="containerS1_3" class="containerS1"></div><!-- 종목추천 id = containerS1 -->
+                                </div>
+                                <!-- //chartData -->
+
+                                <div class="right_area">
+                                    <!--  수익률(추천가-현재가 수익%) 표시 -->
+                                    <div class="revenue_box" style="display: none;">
+                                        <span class="title"><i></i> 수익률</span>
+                                        <span class="percent"><i></i> 10.23%</span>
+                                    </div>
+                                    <!-- //수익률(추천가-현재가 수익%) 표시 -->
+
+                                    <!-- 목표가 달성시 -->
+                                    <div class="attainment_box">
+                                        <span class="title"><i></i> 목표가달성</span>
+                                        <span class="percent"><i></i> 10.23%</span>
+                                    </div>
+                                    <!-- //목표가 달성시 -->
+                                    <table cellspacing="0" border="1" class="tableRanking data_attainment">
+                                        <colgroup>
+                                            <col width="60px">
+                                            <col width="">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="goal"><span>목표가</span></th>
+                                                <td class="goal_num"><span>157,344</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="goal"><span>추천가</span></th>
+                                                <td class="goal_num"><span>157,344</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>PER(배)</span></th>
+                                                <td class=""><span>174</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>PBR(배</span></th>
+                                                <td class=""><span>15,474</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class=""><span>ROE(%)</span></th>
+                                                <td class=""><span>17,344</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //chart_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                    </div>
+                    <!-- //swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //swiper-container -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid eventPicks_area">
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h4 class="event_name">마이크로소프트</h4>
+                        <ul class="detail">
+                            <li class="num"><span class="increase">186.60</span></li>
+                            <li class="per"><span class="increase">+2.26%</span> <!-- increase 증가, decrease 감소 -->
+                            </li>
+                        </ul>
+                        <!-- //detail -->
+                        <div id="containerS2_1" class="containerS2"></div><!-- 종목추천 id = containerS2 -->
+                    </div>
+                    <!-- //chartData -->
+                    <div class="chartGoal">
+                        <dl>
+                            <dt>추천가</dt>
+                            <dd>253.03</dd>
+                        </dl>
+                        <dl>
+                            <dt>목표가</dt>
+                            <dd>1265.03</dd>
+                        </dl>
+                        <span class="attainment">달성 19.12/24</span>
+                    </div>
+                    <!-- //chartGoal -->
+                </div>
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h4 class="event_name">마이크로소프트마이크로소프트</h4>
+                        <ul class="detail">
+                            <li class="num"><span class="increase">186.60</span></li>
+                            <li class="per"><span class="increase">+2.26%</span> <!-- increase 증가, decrease 감소 -->
+                            </li>
+                        </ul>
+                        <!-- //detail -->
+                        <div id="containerS2_2" class="containerS2"></div><!-- 종목추천 id = containerS2 -->
+                    </div>
+                    <!-- //chartData -->
+                    <div class="chartGoal">
+                        <dl>
+                            <dt>추천가</dt>
+                            <dd>253.03</dd>
+                        </dl>
+                        <dl>
+                            <dt>목표가</dt>
+                            <dd>1265.03</dd>
+                        </dl>
+                        <span class="attainment">달성 19.12/24</span>
+                    </div>
+                    <!-- //chartGoal -->
+                </div>
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h4 class="event_name">마이크로소프트</h4>
+                        <ul class="detail">
+                            <li class="num"><span class="increase">186.60</span></li>
+                            <li class="per"><span class="increase">+2.26%</span> <!-- increase 증가, decrease 감소 -->
+                            </li>
+                        </ul>
+                        <!-- //detail -->
+                        <div id="containerS2_3" class="containerS2"></div><!-- 종목추천 id = containerS2 -->
+                    </div>
+                    <!-- //chartData -->
+                    <div class="chartGoal">
+                        <dl>
+                            <dt>추천가</dt>
+                            <dd>253.03</dd>
+                        </dl>
+                        <dl>
+                            <dt>목표가</dt>
+                            <dd>1265.03</dd>
+                        </dl>
+                        <span class="attainment">달성 19.12/24</span>
+                    </div>
+                    <!-- //chartGoal -->
+                </div>
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h4 class="event_name">마이크로소프트</h4>
+                        <ul class="detail">
+                            <li class="num"><span class="increase">186.60</span></li>
+                            <li class="per"><span class="increase">+2.26%</span> <!-- increase 증가, decrease 감소 -->
+                            </li>
+                        </ul>
+                        <!-- //detail -->
+                        <div id="containerS2_4" class="containerS2"></div><!-- 종목추천 id = containerS2 -->
+                    </div>
+                    <!-- //chartData -->
+                    <div class="chartGoal">
+                        <dl>
+                            <dt>추천가</dt>
+                            <dd>253.03</dd>
+                        </dl>
+                        <dl>
+                            <dt>목표가</dt>
+                            <dd>1265.03</dd>
+                        </dl>
+                        <span class="attainment">달성 19.12/24</span>
+                    </div>
+                    <!-- //chartGoal -->
+                </div>
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h4 class="event_name">마이크로소프트</h4>
+                        <ul class="detail">
+                            <li class="num"><span class="increase">186.60</span></li>
+                            <li class="per"><span class="increase">+2.26%</span> <!-- increase 증가, decrease 감소 -->
+                            </li>
+                        </ul>
+                        <!-- //detail -->
+                        <div id="containerS2_5" class="containerS2"></div><!-- 종목추천 id = containerS2 -->
+                    </div>
+                    <!-- //chartData -->
+                    <div class="chartGoal">
+                        <dl>
+                            <dt>추천가</dt>
+                            <dd>253.03</dd>
+                        </dl>
+                        <dl>
+                            <dt>목표가</dt>
+                            <dd>1265.03</dd>
+                        </dl>
+                        <span class="attainment">달성 19.12/24</span>
+                    </div>
+                    <!-- //chartGoal -->
+                </div>
+                <div class="btn_more">
+                    <a href=""><i></i>더보기</a>
+                </div>
+                <!-- //btn_more -->
+            </div> <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+
+        <div id="footer">
+            <div class="notice">
+                <p>원활한 서비스 제공을 위해 추천종목 중 설정된 ‘손절가’에 도달한 종목은 목록에 표시되지 않습니다.</p>
+                <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+            </div>
+            <!-- //notice -->
+            <p class="dataLink">data from <a href="https://www.quandl.com/" target="_blank">Quandl and
+                    Sharadar</a>
+            </p>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

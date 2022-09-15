@@ -1,0 +1,356 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+*{margin:0;padding:0}
+html,body{width:100%;height:100%}
+body{font-family: '맑은고딕', 'Noto Sans CJK KR', 'IBM Plex Sans', 'Helvetica', sans-serif; font-size:14px ; color:#333}
+
+html,body,div,span,strong,b,em,p,dl,dt,dd,ul,ol,li,a,img,hr,pre,table,caption,thead,tbody,tfoot,tr,th,td,fieldset,legend,summary,label,input,textarea,button,iframe,header,footer,address,nav,main,section,article,aside,canvas,video,audio,time,h1,h2,h3,h4,h5,h6{margin:0;padding:0;border:0;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-break:keep-all;word-wrap:break-word; font-weight: 400;}
+html,body,div,em,p,dl,dt,dd,ul,ol,li,a,img,hr,pre,table,caption,thead,tbody,tfoot,tr,th,td,fieldset,legend,summary,label,input,textarea,button,iframe,header,footer,address,nav,main,section,article,aside,canvas,video,audio,time,h1,h2,h3,h4,h5,h6{
+    /* font-family:'맑은고딕'; */
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    html,body,div,em,p,dl,dt,dd,ul,ol,li,a,img,hr,pre,table,caption,thead,tbody,tfoot,tr,th,td,fieldset,legend,summary,label,input,textarea,button,iframe,header,footer,address,nav,main,section,article,aside,canvas,video,audio,time,h1,h2,h3,h4,h5,h6{
+        font-family:'맑은고딕';
+    }
+}
+ul,ol,dl,dd,dt,li{list-style-type:none}
+legend{display:none}
+blockquote,q{quotes:'none'}
+table{width:100%;border-collapse:collapse;border-spacing:0; border: none;}
+iframe{border:0 none}
+em,address{font-style:normal;font-weight:normal}
+button{cursor:pointer}
+img{border:0;vertical-align:top}
+a{color:#111;text-decoration:none;}
+a:active,a:focus,a:link,a:visited{text-decoration:none}
+a:hover{text-decoration:underline}
+a:hover,a:active:hover,a:focus:hover,a:link:hover,a:visited:hover{text-decoration:underline}
+
+/* select */
+.select{ display:inline-block; *display:inline; position:relative; background:#fff; line-height:normal; *zoom:1; vertical-align: top; /*top: 1px;*/ top: -2px;}
+.select *{ margin:0; padding:0; cursor:pointer}
+.select .my_value{ overflow:visible; position:relative; top:0; left:0; z-index:2; border-bottom:1px solid #dddddd; background:transparent; color:#888; text-align:left; line-height:19px; _line-height:normal}
+.select .my_value.selected{}
+.select.open .my_value,
+.select .my_value.outLine{}
+.select button.my_value{ width:100%; height:26px; font-size: 12px; *padding-left:5px; text-indent:5px; *text-indent:0; color: #333; outline: none;}
+.select div.my_value{ height:27px; text-indent:8px}
+.select .ctrl{ position:absolute; top:0; right:0; width:18px; height:26px; border:none; background: url('http://menu.itooza.com/globalstock/img/icon/select_ctrl.png') no-repeat 0 0;}
+.select.open .ctrl {background-position: 0 100%;}
+.select ul{ overflow:hidden; position:absolute; top:25px; left:0; width:100%; border:0; border-top:1px solid #888888; border-bottom:1px solid #888888; background:#fff; list-style:none}
+.select ul.a_list{display:none}
+.select.open ul.a_list{ display:block; z-index: 999;}
+.select ul.i_list{ left:-2000%}
+.select.open ul.i_list{ left:0}
+.select li{ overflow:hidden; position:relative; height:28px; border-left:1px solid #888888; border-right:1px solid #888888; white-space:nowrap; text-align: left;}
+.select li input.option{ position:absolute; width:100%; height:27px; line-height:28px}
+.select li label{ position:absolute; top:0; left:0; width:100%; height:27px; background:#fff; color:#767676; line-height:27px; text-indent:8px; *text-indent:6px}
+.select li a{ display:block; height:28px; background:#fff; font-size: 12px; color:#767676; line-height:27px; text-indent:8px; *text-indent:6px; text-decoration:none}
+.select li.hover *{ color:#333; text-decoration: underline;}
+.select_go{ overflow:visible; height:21px; width:28px; *margin:-1px 0 -1px 4px; padding:0; border:1px solid #888888; background:#eee; font:bold 11px Tahoma; color:#767676; line-height:19px; _line-height:normal; vertical-align:middle; cursor:pointer}
+
+/* table */
+.tableColtype,.tableColtype th,.tableColtype td{border:0}
+.tableColtype{width:100%; text-align:center;}
+.tableColtype thead {z-index: 99;}
+.tableColtype tbody {z-index: 1; position: relative;}
+.tableColtype caption{display:none}
+.tableColtype th {padding:14px 0 15px;}
+.tableColtype td {padding:11px 0 10px;}
+.tableColtype.sumtable .fntfmly_num th {border-top: 1px solid #d8d8d8;}
+.tableColtype.sumtable td {padding:14px 0 14px; background:url('http://menu.itooza.com/globalstock/img/table_border.gif') repeat-x left bottom;}
+.tableColtype th{border-top: 1px solid #aaa; border-bottom: 2px solid #555; background: #fff; color: #000; font-size: 14px;}
+.tableColtype tr.fntfmly_num th {font-family: 'Lato', "Noto Sans KR", "IBM Plex Sans", Helvetica;}
+.tableColtype th.thbder400 {border-bottom: none; color: #55517e; font-size: 13px; padding: 6px 0 7px; font-size: 13px;}
+.tableColtype th.thbder300 {/*padding: 6px 0 7px;*/ font-size: 13px;}
+.tableColtype th.bdrL {border-left: 1px solid #8a8a8a}
+.tableColtype th.bdrR {background:url('http://menu.itooza.com/globalstock/img/table_borderRWS.gif') repeat-y right top;}
+.tableColtype td{/*border-right: 1px solid #f0f0f0;*/ background:url('http://menu.itooza.com/globalstock/img/table_border.gif') repeat-x left bottom;}
+.tableColtype td.bdrRightW {background:url('http://menu.itooza.com/globalstock/img/table_border.gif') repeat-x left bottom, url('http://menu.itooza.com/globalstock/img/table_borderRWS.gif') repeat-y right top;}
+.tableColtype th.bdrRightW {background:#fff url('http://menu.itooza.com/globalstock/img/table_borderRWS.gif') repeat-y right top;}
+.tableColtype td span.lock {display: inline-block; width: 100%; text-align: center;}
+.tableColtype td:last-child {border-right: none; background:url('http://menu.itooza.com/globalstock/img/table_border.gif') repeat-x left bottom}
+.tableColtype tr:last-child td {}
+.tableColtype tr{background-color: #fff}
+.tableColtype tr:nth-child(2n) {background-color: #f6f6f9;}
+.tableColtype.tableCash th span,
+.tableColtype.tableReports th span,
+.tableColtype.tableBill th span {font-size: 13px !important;}
+.tableColtype.sumtable .fntfmly_num th span {font-size: 13px !important;}
+
+.globalStock #container .tableData .tableScroll .typeScroll.tableReports th:first-child span {width: 178px;}
+.globalStock #container .tableData .tableScroll .typeScroll.tableReports tr[class^="depth02"] td:first-child span {width: 156px;}
+.globalStock #container .tableData .tableScroll .typeScroll.tableReports td:first-child {width: 157px; background-color: inherit}
+.globalStock #container .tableData .tableScroll .typeScroll.tableInvest {}
+.globalStock #container .tableData .tableScroll .typeScroll.tableInvest tr[class^="depth02"] td:first-child span {width: 185px;}
+.globalStock #container .tableData .tableScroll .typeScroll.tableInvest tr.depth02 td:first-child {width: 195px;}
+.globalStock #container .tableData .tableScroll .typeScroll.tableInvest th:first-child span {width: 196px;}
+.globalStock #container .tableData .tableScroll .typeScroll.tableInvest tr.depth01 td.tdfix {width: 195px;}
+
+
+body.globalStock  {box-sizing: border-box;}
+.globalStock #wrap {margin: 0 auto; width: 100%; box-sizing: border-box; /*background: url('http://menu.itooza.com/globalstock/img/temp.gif') no-repeat center -131px;*/}
+.globalStock #header {height: 87px; width: 1200px; margin: 0 auto; box-sizing: border-box; border-bottom: 1px solid #333;}
+.globalStock #container {margin: 0 auto; max-width: 1200px; min-width: 960px; width: 100%; box-sizing: border-box;}
+.globalStock #container::after {display: block; content: ''; clear: both;}
+.globalStock #footer {clear: both; margin-top: 110px;}
+.globalStock .mainbg #footer {margin-top: 60px}
+
+/** 게시판 **/
+.globalStock #container .mainDivision {position: relative; margin-top: 60px; /*min-width: 1200px;*/}
+.globalStock #container .mainDivision .mainLeft {/*float: left;*/ width: 100%; min-height: 990px; /*min-width: 1200px;*/ box-sizing: border-box; padding-right: 300px;}
+.globalStock #container .mainDivision .mainRight {position: absolute; right: 0; top: 0; width: 300px; box-sizing: border-box; padding-left:43px; border-left: 1px solid #e6e6e6;}
+.globalStock #container .subDivision {clear: both; position: relative; margin-top: 46px;}
+.globalStock #container .subDivision .admin_menu {position: absolute; left: 0; top: 100px; width: 200px;}
+.globalStock #container .subDivision .admin_right {/*float: left;*/ width: 100%; margin-top: 60px; padding-left: 200px; box-sizing: border-box; min-height: 850px}
+.globalStock #container .subDivision .subRight {position: absolute; right: 0; top: 0; width: 256px; box-sizing: border-box; padding-left:34px; border-left: 1px solid #e6e6e6;}
+.globalStock #container .subDivision .admin_menu .list_form{width:100%;padding:5px 0}
+.globalStock #container .subDivision .admin_menu .list_form legend{overflow:hidden;visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.globalStock #container .subDivision .admin_menu .list_form{color:#c4c4c4;text-align:center}
+.globalStock #container .subDivision .admin_menu .list_form select,
+.globalStock #container .subDivision .admin_menu .list_form input{margin:-1px 0 1px;font-size:12px;color:#373737;vertical-align:middle}
+.globalStock #container .subDivision .admin_menu .list_form .keyword{margin-left:1px;padding:2px 3px 5px;border:1px solid #b5b5b5;font-size:12px;line-height:15px}
+.globalStock #container .subDivision .admin_menu .menu {}
+.globalStock #container .subDivision .admin_menu .menu li a {color: #999;}
+.globalStock #container .subDivision .admin_menu .menu li.active a {font-weight: bold; color: #333;}
+.globalStock #container .subDivision .sta {}
+.globalStock #container .subDivision .sta li {color: #333; display: inline-block; font-weight: bold; margin-left: 10px;}
+.globalStock #container .subDivision .sta li.home {color: #999; margin-left: 0;}
+
+.form_table{margin:1em 0;font-size:12px;font-family:Tahoma, Geneva, sans-serif}
+.form_table input,
+.form_table textarea,
+.form_table select,
+.form_table table,
+.form_table button{font-size:12px}
+.form_table table{width:100%;border:0;border-top:2px solid #999}
+.form_table caption{padding:8px 0;font-weight:bold;text-align:left}
+.form_table th,
+.form_table td{padding:8px;border:0;vertical-align:top}
+.form_table th{color:#333}
+.form_table td{color:#666}
+.form_table thead th{border-bottom:1px solid #ccc;background:#f8f8f8}
+.form_table tbody th{border-bottom:1px solid #ddd;background:#fafafa;text-align:left}
+.form_table tfoot th{border-bottom:1px solid #ddd}
+.form_table tbody td{border-bottom:1px solid #ddd}
+.form_table tfoot td{border-bottom:1px solid #ddd;font-weight:bold;color:#333}
+.form_table .item{position:relative;margin:-4px 0}
+.form_table .item .i_help{position:absolute;top:4px;right:0}
+.form_table .item .i_label{ top:6px; left:10px}
+.form_table .item .i_dsc{margin:2px 0}
+.form_table .item .i_check,
+.form_table .item .i_radio{width:13px;height:13px;margin:2px 5px 2px 0;padding:0;vertical-align:middle}
+.form_table .item .i_text{position:relative;margin:2px;padding:3px 4px;border:1px solid #b7b7b7;border-right-color:#e1e1e1;border-bottom-color:#e1e1e1;background:transparent}
+.form_table .item .hide{visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.form_table .item select{margin:2px}
+.form_table .item label{margin:0 10px 0 0;cursor:pointer}
+
+
+/* 리스트 */
+.globalStock #container .subDivision .admin_right .top_box {background: silver; padding: 20px 20px;}
+.globalStock #container .subDivision .admin_right .top_box .btn_reg {border:1px solid blue; background: #fff; outline: none; padding: 15px 12px;}
+.globalStock #container .subDivision .admin_right .top_box .txt_input {border: 1px solid #999;}
+.globalStock #container .subDivision .admin_right .top_box .item {display: inline-block; margin: 0 15px;}
+
+/* 토론 */
+.globalStock #container .subDivision .admin_right .investmentOpinion {background: #f2f2f2; position: relative; height: 48px; line-height: 48px; padding: 0 20px; box-sizing: border-box;}
+.globalStock #container .subDivision .admin_right .investmentOpinion .title {color: #000; font-size: 14px; font-weight: bold; background: url('http://menu.itooza.com/globalstock/img/icon/icon_investmentOpinion.png') no-repeat 0 4px; padding-left: 18px;}
+.globalStock #container .subDivision .admin_right .investmentOpinion dl,
+.globalStock #container .subDivision .admin_right .investmentOpinion dt,
+.globalStock #container .subDivision .admin_right .investmentOpinion dd {display: inline-block; color: #000; font-size: 13px;}
+.globalStock #container .subDivision .admin_right .investmentOpinion dl {margin-left: 30px;}
+.globalStock #container .subDivision .admin_right .investmentOpinion dt {position: relative; padding-right: 0.7rem;}
+.globalStock #container .subDivision .admin_right .investmentOpinion dt::before {content: ""; position: absolute; right: 14px; top: 18px; display: inline-block; width: 1px; height: 12px; border-right: 1px solid #d5d5df;}
+.globalStock #container .subDivision .admin_right .investmentOpinion dd {padding-right: 15px; font-size: 12px;}
+
+
+/* 댓글 */
+/* Default */
+.cb_module{font-size:15px;font-weight:normal;line-height:15px}
+.cb_module p,.cb_module h1,.cb_module h2,.cb_module h3,.cb_module h4,.cb_module h5,.cb_module h6,.cb_module ul,.cb_module ol,.cb_module li,.cb_module dl,.cb_module dt,.cb_module dd,.cb_module table,.cb_module th,.cb_module td,.cb_module form,.cb_module fieldset,.cb_module legend,.cb_module input,.cb_module textarea,.cb_module button,.cb_module select{margin:0;padding:0;color: #000;}
+.cb_module img,.cb_module fieldset{border:none}
+.cb_module hr,.cb_module button img{display:none}
+.cb_module li{list-style:none}
+.cb_module em{font-style:normal}
+.cb_module a{color:#333;text-decoration:none}
+.cb_module a:hover,.cb_module a:active,.cb_module a:focus{text-decoration:underline}
+.cb_module textarea{overflow:auto;resize:none}
+.cb_module legend,.cb_module .cb_blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.cb_module label{cursor:pointer}
+
+/* Define Class */
+.cb_module .cb_cb{clear:both}
+
+/* Input Type */
+.cb_module .cb_input_rdo,.cb_module .cb_input_chk{width:13px;height:13px;vertical-align:middle}
+.cb_module .cb_input_txt{height:19px;padding:4px 0 0 6px;border:1px solid #d1d1d1;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;background:#fff;color:#aaa;font-size:12px;vertical-align:top}
+
+/* Comment Box paginate */
+.cb_module .cb_paginate{margin:16px 0 20px;padding:15px 0;text-align:center}
+.cb_module .cb_paginate a,.cb_module .cb_paginate strong{display:inline-block;_position:relative;box-sizing: border-box; width: 26px; height: 26px; line-height: 26px; font-size: 13px; color: #888; font-family:'IBM Plex Sans', 'Helvetica', sans-serif; vertical-align: top;}
+.cb_module .cb_paginate strong{color:#fff !important; background: #5e5ead;}
+.cb_module .cb_paginate a:hover{color: #4339ce; text-decoration: underline;}
+.cb_module .cb_paginate a.cb_pre,
+.cb_module .cb_paginate a.cb_pre_end,
+.cb_module .cb_paginate a.cb_next,
+.cb_module .cb_paginate a.cb_next_end{font-size: 0; background: url('http://menu.itooza.com/globalstock/img/cb_paginate_arrow.png') no-repeat 0 -41px;}
+
+.cb_module .cb_paginate a.cb_pre{background-position: -38px -41px; margin-right: 20px;}
+.cb_module .cb_paginate a.cb_pre_end{background-position: 0 -41px;}
+.cb_module .cb_paginate a.cb_next{background-position: -77px -41px; margin-left: 20px;}
+.cb_module .cb_paginate a.cb_next_end{background-position: -120px -41px;}
+.cb_module .cb_paginate a.cb_pre:hover{background-position: -38px 7px;}
+.cb_module .cb_paginate a.cb_pre_end:hover{background-position: 0 7px;}
+.cb_module .cb_paginate a.cb_next:hover{background-position: -77px 7px;}
+.cb_module .cb_paginate a.cb_next_end:hover{background-position: -120px 7px;}
+
+.paginate{margin:37px 0 20px;padding:15px 0;text-align:center}
+.paginate a,
+.paginate strong{display:inline-block;_position:relative;box-sizing: border-box; width: 26px; height: 26px; line-height: 26px; font-size: 13px; color: #888; font-family:'IBM Plex Sans', 'Helvetica', sans-serif; vertical-align: top;}
+.paginate strong{color:#fff !important; background: #5e5ead;}
+.paginate a:hover{color: #4339ce; text-decoration: underline;}
+.paginate a.cb_pre,
+.paginate a.cb_pre_end,
+.paginate a.cb_next,
+.paginate a.cb_next_end{font-size: 0; background: url('http://menu.itooza.com/globalstock/img/cb_paginate_arrow.png') no-repeat 0 -41px;}
+
+.paginate a.cb_pre{background-position: -38px -41px; margin-right: 20px;}
+.paginate a.cb_pre_end{background-position: 0 -41px;}
+.paginate a.cb_next{background-position: -77px -41px; margin-left: 20px;}
+.paginate a.cb_next_end{background-position: -120px -41px;}
+.paginate a.cb_pre:hover{background-position: -38px 7px;}
+.paginate a.cb_pre_end:hover{background-position: 0 7px;}
+.paginate a.cb_next:hover{background-position: -77px 7px;}
+.paginate a.cb_next_end:hover{background-position: -120px 7px;}
+
+/* Select Box - Jindo Component */
+.selectbox-noscript select,.selectbox-noscript div{display:none}
+.selectbox-noscript .selectbox-source{display:inline;position:relative;left:0}
+.selectbox-noscript .selectbox-source option{display:block}
+.selectbox-source{position:absolute;left:-9999px}
+.selectbox-box{position:relative;z-index:20;width:110px;height:24px;background:url(http://static.naver.com/common/comment/bg_sprite_select.gif) 0 0 scroll repeat-x}
+.selectbox-label{display:block;width:100%;padding:4px 0 5px 12px !important;background:url(http://static.naver.com/common/comment/bg_sprite_select.gif) 100% -24px no-repeat;color:#424242;text-align:left;cursor:pointer}
+.selectbox-layer{display:none;overflow:hidden !important;position:absolute;z-index:20;width:100px;margin-top:-1px !important;border:1px solid #c3c3c3;background:#fff !important;text-align:left}
+.selectbox-list ul{margin:0;padding:0;list-style:none}
+.selectbox-list ul li{display:block;overflow:hidden;height:14px;padding:4px 0 6px 11px !important;border-top:1px solid #f3f3f3;color:#424242;font-size:12px;line-height:14px;text-align:left}
+.selectbox-list ul li.selectbox-item{cursor:pointer}
+.selectbox-list ul li.selectbox-item-over{background:#f8f8f8}
+
+
+/* 마이페이지 */
+.globalStock #container .myPageTitle {color: #333; font-size: 29px; font-weight: normal;}
+.globalStock #container .mapage_tabs {position: relative;}
+.globalStock #container .mapage_tabs ul.tabs {}
+.globalStock #container .mapage_tabs ul.tabs li {/*background: url('http://menu.itooza.com/globalstock/img/txt/txt_mypage.png') no-repeat 0 -54px;*/}
+.globalStock #container .mapage_tabs ul.tabs li:nth-child(1) {width: 92px;}
+.globalStock #container .mapage_tabs ul.tabs li:nth-child(2) {width: 146px; background-position-x: -92px; cursor: default}
+.globalStock #container .mapage_tabs ul.tabs li:nth-child(3) {width: 141px; background-position-x: 100%; cursor: default}
+.globalStock #container .mapage_tabs ul.tabs li.active:nth-child(1),
+.globalStock #container .mapage_tabs ul.tabs li:hover:nth-child(1){background-position-x:0;}
+.globalStock #container .mapage_tabs .linkMypage {position: absolute; right: 7px; top: 0; color: #2c2c60; font-size: 12px; text-decoration: underline; line-height: 48px;}
+.globalStock #container .chkOnoff {text-align: right;}
+/* The switch - the box around the slider */
+.globalStock #container .chkOnoff .switch {position: relative; top: -1px; display: inline-block; width: 20px; height: 9px;vertical-align:middle;}
+
+/* Hide default HTML checkbox */
+.globalStock #container .chkOnoff .switch input {display:none;}
+
+/* The slider */
+.globalStock #container .chkOnoff .slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #c1c1c1; -webkit-transition: .4s; transition: .4s;}
+.globalStock #container .chkOnoff .slider:before {position: absolute; content: ""; height: 13px;width: 13px;left: -5px;top: -3px;border: 1px solid #c1c1c1;background-color: white;-webkit-transition: .4s;transition: .4s;}
+.globalStock #container .chkOnoff input:checked + .slider {background-color: #6d6dd7;}
+
+.globalStock #container .chkOnoff input:checked + .slider:before {
+-webkit-transform: translateX(15px);
+-ms-transform: translateX(15px);
+transform: translateX(15px);
+border-color: #6d6dd7;
+}
+
+/* Rounded sliders */
+.globalStock #container .chkOnoff .slider.round {border-radius: 34px;}
+.globalStock #container .chkOnoff .slider.round:before {border-radius: 50%;}
+.globalStock #container .chkOnoff p {margin:0px; margin-left: 5px; display:inline-block; color: #000; font-size: 12px;}
+.globalStock #container .chkOnoff p span {color: #6a6a6a; font-size: 11px;}
+
+/* cms 게시판 리스트 */
+.globalStock #container .tableData .tableColtype.board {}
+.globalStock #container .tableData .tableColtype.board tr {background: none;}
+.globalStock #container .tableData .tableColtype.board th {color: #666; font-size: 15px; font-weight: normal; padding: 18px 0 19px;}
+.globalStock #container .tableData .tableColtype.board td {color: #000; text-align: center; border-right: none; padding: 13px 0}
+.globalStock #container .tableData .tableColtype.board td.category {font-size: 13px;}
+.globalStock #container .tableData .tableColtype.board td.sum {font-size: 17px; text-align: left; padding-left: 13px;}
+.globalStock #container .tableData .tableColtype.board td.sum a {color: #000; display: inline-block; max-width:530px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.globalStock #container .tableData .tableColtype.board td.sum a:hover {color: #6262f8; text-decoration: underline;}
+.globalStock #container .tableData .tableColtype.board td.day {color: #666; font-size: 14px;}
+.globalStock #container .tableData .tableColtype.board td.day.unexp{color: red;}
+.globalStock #container .tableData .tableColtype.board td.type {color: #666; font-size: 14px;}
+.globalStock #container .tableData .tableColtype.board td.type.auto {color: blue;}
+.globalStock #container .tableData .tableColtype.board td.type.manual {color: red;}
+.globalStock #container .btnArea {overflow: hidden;}
+.globalStock #container .btnArea .btn {display: inline-block; border: 1px solid #5e5ead; color: #000; font-size: 13px; text-align: center; box-sizing: border-box; min-width: 108px; height: 37px; padding-top: 10px;}
+.globalStock #container .btnArea .btn:hover {background: #5e5ead; color: #fff; text-decoration: underline;}
+.globalStock #container .btnArea .btn.fr {float: right;}
+
+.globalStock #container .form_table span.p_check {font-size: 14px; color: blue; padding: 0 10px;}
+.globalStock #container .form_table span.possible {}
+.globalStock #container .form_table span.impossible {color: red;}
+.globalStock #container .boardcheck_area {text-align: right;}
+
+.globalStock #container .form_table{}
+.globalStock #container .form_table input,
+.globalStock #container .form_table textarea,
+.globalStock #container .form_table select,
+.globalStock #container .form_table table,
+.globalStock #container .form_table button{font-size:12px}
+.globalStock #container .form_table table{width:100%;border:0;border-top:2px solid #555;}
+.globalStock #container .form_table caption{padding:8px 0;font-weight:bold;text-align:left}
+.globalStock #container .form_table th,
+.globalStock #container .form_table td{padding:17px 15px;border:0;vertical-align:top}
+.globalStock #container .form_table th{color:#000; font-size: 13px; font-weight: normal;}
+.globalStock #container .form_table td{color:#555; font-size: 14px; max-height: 52px; box-sizing: border-box;}
+.globalStock #container .form_table thead th{border-bottom:1px solid #ccc;background:#f8f8f8}
+.globalStock #container .form_table tbody th{border-bottom:1px solid #ddd;background:#f6f6f6;text-align:left}
+.globalStock #container .form_table tfoot th{border-bottom:1px solid #ddd}
+.globalStock #container .form_table tbody td{border-bottom:1px solid #ddd}
+.globalStock #container .form_table tfoot td{border-bottom:1px solid #ddd;font-weight:bold;color:#333}
+.globalStock #container .form_table tbody td span.date{display: inline-block; margin-left: 16px; color: #9e9e9e; font-size: 13px; font-family: 'IBM Plex Sans', 'Helvetica', sans-serif;}
+.globalStock #container .form_table .item{position:relative;margin:-4px 0}
+.globalStock #container .form_table .item .i_help{position:absolute;top:4px;right:0}
+.globalStock #container .form_table .item .i_label{ top:6px; left:10px}
+.globalStock #container .form_table .item .i_dsc{margin:2px 0}
+.globalStock #container .form_table .item .i_check,
+.globalStock #container .form_table .item .i_radio{width:13px;height:13px;margin:2px 5px 2px 0;padding:0;vertical-align:middle}
+.globalStock #container .form_table .item .i_text{position:relative;background:transparent;border: 1px solid #ccc; height: 27px; padding: 5px 5px; box-sizing: border-box; color: #000; font-size: 12px;}
+.globalStock #container .form_table .item .hide{visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.globalStock #container .form_table .item select{margin:2px}
+.globalStock #container .form_table .item label{margin:6px 35px 0 0;cursor:pointer}
+.globalStock #container .form_table .fontWit {font-weight: bold; color: #000; font-size: 13px;}
+
+.globalStock #container .form_table {margin-top: 10px;}
+.globalStock #container .form_table .inputChk {margin-bottom: 15px;}
+.globalStock #container .form_table .inputChk:after {display:block; clear:both; content:"";}
+.globalStock #container .form_table .inputChk input[type="checkbox"] {display: none;}
+.globalStock #container .form_table .inputChk input[type="checkbox"] + label { width:16px; height: 16px; background:url('http://menu.itooza.com/globalstock/img/icon/inputChk.gif') no-repeat 0 0; cursor: pointer; float: right;}
+.globalStock #container .form_table .inputChk input[type="checkbox"]:checked + label {background-position-y: -24px; float: right}
+.globalStock #container .form_table .inputChk input[type="checkbox"] + label span {position: absolute; right: 0px; display: block; }
+.globalStock #container .form_table .select .my_value {border-color: #ccc; height: 27px;}
+.globalStock #container .form_table .select ul {top: 27px; border-color: #ccc;}
+.globalStock #container .form_table .select li { border-color: #ccc;}
+
+.globalStock #container .form_table .where {display: block;margin: 25px 15px;font-size: 11px;color: #000;text-decoration: none;font-family: verdana;font-style: italic;} 
+.globalStock #container .form_table .filebox input[type="file"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
+.globalStock #container .form_table .filebox label {display: inline-block;line-height: normal;vertical-align: middle; height: 28px; text-align: center; margin: 0; padding: 6px 10px 0 10px; box-sizing: border-box;}
+.globalStock #container .form_table .filebox .upload-name {width:218px;  display: inline-block;vertical-align: middle;background-color: #fff; border: 1px solid #c8c8c8; height: 27px; padding: 0 10px; border-bottom: 1px solid #e2e2e2; -webkit-appearance: none;-moz-appearance: none;appearance: none;}
+.globalStock #container .form_table .filebox.bs3-primary label {font-size: 12px; color: #fff; background-color: #5e5ead;}
+
+.globalStock #container .btnArea.edtBtn {margin-top: 35px;}
+.globalStock #container .btnArea.edtBtn .btn_cncl {background: #ebebeb; border: 1px solid #cfcfcf; color: #555;}
+.globalStock #container .btnArea.edtBtn .btn_cncl:hover {color: #000;}
+.globalStock #container .btnArea.edtBtn .btn_save {background: #5e5ead; border: 1px solid #5e5ead; color: #fff;}
+.globalStock #container .btnArea.edtBtn .btn_save:hover {background: #2c2c60; border: 1px solid #2c2c60;}
+.globalStock #container .edtArea {margin: 15px 0;}

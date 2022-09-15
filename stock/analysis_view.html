@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="월가히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="월가히어로">
+    <!-- <meta property="og:image" content="favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://월가히어로">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">
+        <div id="header" class="header sch_heaher">
+            <!-- 헤더 타입 3 (ex 종목추천(개별종목) 등) -->
+            <div class="history_back" title="이전페이지">
+                <a class="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!-- //history_back -->
+            <div class="headerTop">
+                <h1 class="headerLogo"><a href="">종목분석</a></h1>
+            </div>
+            <!-- //headerTop -->
+        </div>
+
+        <!-- 종목분석 class = sub_analysis-->
+        <div id="container" class="sub_analysis">
+            <!-- 주요 콘텐츠 -->
+            <div class="sub_top view">
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h2 class="title" title="Microsoft Corp"><a href="/stocks/summary/MSFT">월트디즈니월트디즈니</a></h2>
+                        <a href="#" class="more"><img src="../img/more_Black@2x.png" alt="더보기"></a>
+                        <ul class="info">
+                            <li class="sum"><span class="eng">MSFT</span> </li>                            
+                            <li class="day">19.05/15, USD</li>
+                        </ul>
+                        <!-- //info -->
+                        <ul class="detail">
+                            <li class="num decrease">154.53</li>
+                            <li class="per">
+                                <span class="decrease">-0.84%</span>
+                                <!-- increase 증가, decrease 감소 -->
+                            </li>                            
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="topbtm_area">
+                        <div class="box opinion_left">
+                            <span class="invest">애널리스트 컨센서스</span>
+                            <span class="recom buying">강력매수</span>
+                            <!-- 매수 : class = buying, 매도 : class = sell -->
+                        </div>
+                        <div class="box opinion_c">
+                            <dl>
+                                <dt class="charm">투자매력점수</dt>
+                                <dd class="charm_num"> <strong>88</strong>
+                                    <span class="percent">상위3.4%</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="box opinion_right">
+                            <dl>
+                                <span class="txt_guide"><img src="../img/txt_guide@2x.png" alt="가이드보기"></span>
+                                <!-- 투자의견, 투자매력 가이드 레이어 -->
+                                <div class="guide_box hide">
+                                    <span class="clse">닫기</span>
+                                    <strong class="title">전종목 투자매력도 각 항목 설명</strong>
+                                    <ul>
+                                        <li><strong>애널리스트 컨센서스</strong>미국 증권사 애널리스트들이 제시한 투자의견 컨센서스(평균)를 표시합니다. 최소 10개 이상 증권사에서 투자의견을 제시한 종목만 제공합니다. 투자의견 컨센서스는 강력매수, 매수, 보유, 매도, 강력매도 5단계로 제시합니다.</li>
+                                        <li><strong>투자매력 점수</strong>빅 데이터 전문 테크핀 기업인 (주)데이터히어로가 개발한 스파이더(SPIDER) 알고리즘에 따라 투자매력을 제시합니다. 기업의 투자매력을 판단하는 22개 요인(Factor) 분석에 따라 
+                                            배당 매력, 사업 독점력, 재무안전성, 수익성장성, 현금창출력을 평가하고 이를 종합해 투자매력 점수와 순위를 제공합니다.
+                                        </li>
+                                        <li><strong>밸류에이션</strong>기업의 사업모델과 특성을 분석해 해당 기업에 최적화된 밸류에이션 알고리즘을 적용해 적정주가를 계산합니다. 이를 현재 주가와 비교해 저평가, 적정가, 고평가 3단계로 제시합니다.</li>                                        
+                                    </ul>
+                                </div>
+                                <!-- //guide_box -->
+                                <dt class="value">벨류에이션</dt>
+                                <dd class="just">
+                                    <figure class="highcharts-figure">
+                                        <div id="contaanalysisview1_1" class="contaanalysisview1"></div>
+                                        <!-- 종목분석 id = contaanalysisview1 -->
+                                        <span class="proper">저평가</span>
+                                    </figure>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- //right_area -->
+                    </div>
+                    <!-- //topbtm_area -->
+
+                    <div id="contaanalysisview1_2" class="contaanalysisview1"></div>
+                    <!-- 종목분석 id = contaanalysisview1 -->
+
+                </div>
+                <!-- //chart_area -->
+
+            </div>
+
+            <!-- //sub_top -->
+
+            <div class="sub_mid view">
+                <div class="guide_area">
+                    <strong class="title">기업분석</strong>
+                    <span class="day">19. 04/23</span>
+                    <div>
+                        <span>①</span>
+                        올해 3분기 매출액 36억 달러(전년비 ▲ 4.6%)
+                        영업이익 18억 달러 (전년비 ▲ 6.3%)
+                        순이익 15.4억 달러(전년비 ▲ 7.1%) 로 성장지속
+                        <br><br>
+                        <span>②</span>
+                        50%에 달하는 높은 영업이익률, 매출액 대비15%의
+                        연구개발비로 향후 신약 파이프라인 투자 지속
+                        <br><br>
+                        <span>③</span>
+                        종양학, 신경 면역햑 분야에서 3개 시판 제품이 성공을
+                        거두며 높은 수익성 달성 중
+                        <br><br>
+                        <span>④</span>
+                        알츠하이머 치료제 후보인 아두카누맙이 2020년 초
+                        미식품의약국(FDA)에 정식 출원 예정
+                        <br><br>
+                        <span>⑤</span>
+                        다발성 경화증(Multiple Sclerosis) 부문의 안정적인 성장과
+                        파킨슨, 유전자 치료 관련 신약 등 혁신적인 파이프라인 보유
+                    </div>
+                    
+                </div>
+                <!-- //guide_area -->
+
+                <div class="performance">
+                    <h4 class="title">최근실적</h4>
+                    <span class="unit">* 기준 : 19.12/24, 백만달러, 연환산</span>
+                    <table cellspacing="0" border="1" class="tableRanking">
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class=""><span>매출액</span></th>
+                                <th class=""><span>영업이익</span></th>
+                                <th class=""><span>순이익</span></th>
+                                <th class=""><span>전년동기비</span></th>
+                            </tr>
+                            <tr>
+                                <td class=""><span>1253.03</span></td>
+                                <td class=""><span>157,344</span></td>
+                                <td class=""><span>157,344</span></td>
+                                <td class="increase"><span>+57,34%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- //performance -->
+
+                <div class="data_table">
+                    <h4 class="title">투자지표</h4>
+                    <a href="#" class="more"><img src="../img/more_Black@2x.png" alt="더보기"></a>
+                    <div>
+                        <!-- 수익성(연환산) -->
+                    <table cellspacing="0" border="1" class="tableRanking">
+                        <colgroup>
+                            <col width="100%">
+                            <col width="70">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="th_ft"><span>수익성(연환산)</span><span class="day">19.09/30</span></th>                                
+                            </tr>
+                            <tr>
+                                <th class="th"><span>영업이익률</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>ROA</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>ROE</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>ROIC</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 안전성(최근분기) -->
+                    <table cellspacing="0" border="1" class="tableRanking">
+                        <colgroup>
+                            <col width="100%">
+                            <col width="70">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="th_ft"><span>안전성(최근분기)</span><span class="day">19.09/30</span></th>                                                                
+                            </tr>
+                            <tr>
+                                <th class="th"><span>유동비율</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>차입금 비중
+                                    </span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>매출채권회전일수</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 성장성(전년대비) -->
+                    <table cellspacing="0" border="1" class="tableRanking">
+                        <colgroup>
+                            <col width="100%">
+                            <col width="70">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="th_ft"><span>성장성(전년대비)</span><span class="day">19.09/30</span></th>                                
+                            </tr>
+                            <tr>
+                                <th class="th"><span>매출성장률</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>이익성장률
+                                    </span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>R&D/매출액</span></th>
+                                <td class="num"><span>47.21%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 가치평가 -->
+                    <table cellspacing="0" border="1" class="tableRanking">
+                        <colgroup>
+                            <col width="100%">
+                            <col width="70">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="th_ft"><span>가치평가<span class="day">19.09/30</span></th>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>PER</span></th>
+                                <td class="num"><span>47.21배</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>PBR</span></th>
+                                <td class="num"><span>47.21배</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>PSR</span></th>
+                                <td class="num"><span>47.21배</span></td>
+                            </tr>
+                            <tr>
+                                <th class="th"><span>EV/EBIDTA</span></th>
+                                <td class="num"><span>47.21배</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    </div>
+                    
+                </div>
+            </div> <!-- //sub_mid -->
+
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>

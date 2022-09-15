@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="월가히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="월가히어로">
+    <!-- <meta property="og:image" content="favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://월가히어로">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+
+    <div id="wrap">
+        <div id="header" class="header">
+            <!-- 헤더 타입 2 (ex 종목추천 등) -->
+            <div class="ninja-btn navToggle" title="menu">
+                <a class="menu-trigger btn_hamburger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="headerTop">
+                <a href="" class="home"><img src="../img/icon_home@2x.png" alt="홈으로 가기"></a>
+                <h1 class="headerLogo"><a href="">투자레시피</a>
+                </h1>
+                <div class="hm">
+                    <a href="../search/searching.html" class="go_sch"><img src="../img/icon_search@2x.png" alt="검색하기"
+                            searchbtn=""></a>
+                </div> <!-- //hm -->
+
+            </div>
+            <!-- //headerTop -->
+
+            <!-- 검색결과 요약 -->
+            <div class="schSummary navFixed">
+                <!--  //검색창 상단고정 class = navFixed -->
+                <h2 class="headerLogo"><a href="">월가히어로</a></h2>
+                <span>Alphabet</span>
+                <a href=""><span>검색</span></a>
+            </div>
+            <!-- //검색결과 요약 -->
+
+            <!--메뉴전체 판넬 -->
+            <div class="panel left">
+                <h3 class="panel_title">월가히어로</h3>
+                <!-- 메뉴의 내용부분 -->
+                <ul class="menu">
+                    <li><a href="">종목추천</a></li>
+                    <li><a href="">종목분석</a></li>
+                    <li><a href="">전종목 투자매력도</a></li>
+                    <li><a href="">투자레시피</a></li>
+                    <li><a href="">대가의 종목</a></li>
+                    <li><a href="">미국주식 탐구생활</a></li>
+                </ul>
+
+                <div class="btm">
+                    <ul>
+                        <li><a href=""><i class="panel_alarm"><img src="../img/icon_alarm@2x.png" alt=""> <strong
+                                        class="alarm_dot">확인안함</strong> </i> 알림</a></li>
+                        <li><a href=""><i class="panel_home"><img src="../img/icon_home@2x.png" alt=""></i> 서비스소개</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--메뉴전체 판넬 -->
+
+            <!--메뉴 밖에 어두워지는 부분-->
+            <div class="panel-overlay"></div>
+        </div>
+
+        <!-- 투자레시피 class = sub_recipe-->
+        <div id="container" class="sub_recipe">
+            <!-- 주요 콘텐츠 -->
+            <div class="sub_top">
+                <div class="">
+                    <h4 class="title"><strong>종목발굴을 위한</strong>만가지 레시피</h4>
+                    <p class="txt">투자자들이 어려워하는 미국주식의 종목발굴을 위해 다양한 컨셉의 종목발굴 투자레시피를 알려드립니다.</p>
+                </div>
+                <!-- //best_research -->
+
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid recipe_tabs">
+
+                <div class="tabsArea_2">
+                    <ul class="tabs_2">
+                        <li class="active" rel="tab4">배당매력주</li>
+                        <li rel="tab5">이익성장주</li>
+                        <li rel="tab6">소비자독점</li>
+                        <li rel="tab7">슈퍼스톡</li>
+                    </ul>
+                    <div class="tab_container">
+                        <!-- 배당매력주 -->
+                        <div id="tab4" class="tab_content" style="display: block;">
+                            <div class="remark">
+                                <p>초보도 벌 수 있는 투자의 정석 <br> “고배당주에 투자하라”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="1" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="data_guide t01">주가</td>
+                                        <td class="data_guide t02">배당매력</td>
+                                        <td class="data_guide t03">주당배당금</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플<span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">마이크로소프트</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">월트디즈니</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.0</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">아마존</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>1.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>78.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">넷플릭스</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            
+
+
+                        </div>
+                        <!-- //배당매력주 -->
+                        <!-- 이익성장주 -->
+                        <div id="tab5" class="tab_content" style="display: none;">
+                            <div class="remark">
+                                <p>위대한 기업을 찾는 공식 <br> “내일의 넷플릭스를 찾아라”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="1" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="data_guide t01">주가</td>
+                                        <td class="data_guide t02">수익성장성</td>
+                                        <td class="data_guide t03">주당순이익</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">마이크로소프트</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">월트디즈니</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.0</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">아마존</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>1.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>78.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">넷플릭스</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //이익성장주 -->
+                        <!-- 소비자독점 -->
+                        <div id="tab6" class="tab_content" style="display: none;">
+                            <div class="remark">
+                                <p>스노우볼 투자전략의 핵심 <br> “소비자 독점 기업을 찾아라”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="1" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="data_guide t01">주가</td>
+                                        <td class="data_guide t02">사업독점력</td>
+                                        <td class="data_guide t03">영업이익률</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">마이크로소프트</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">월트디즈니</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.0</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">아마존</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>1.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>78.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">넷플릭스</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //소비자독점 -->
+                        <!-- 슈퍼스톡 -->
+                        <div id="tab7" class="tab_content" style="display: none;">
+                            <div class="remark">
+                                <p>슈퍼스톡 <br> “뛰는 주 위에 나는 주, 슈퍼종목을 찾아라!”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="1" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="data_guide t01">주가</td>
+                                        <td class="data_guide t02">투자매력</td>
+                                        <td class="data_guide t03">주당순이익</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">마이크로소프트</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">월트디즈니</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.0</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">아마존</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>1.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>78.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">넷플릭스</a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32<span class="dollar">달러</span></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //슈퍼스톡 -->
+                    </div>
+                    <!-- .tab_container -->
+                </div>
+
+                <div class="btn_more">
+                    <a href=""><i></i>더보기</a>
+                </div>
+                <!-- //btn_more -->
+
+                <p class="dataLink">data from <a href="https://www.quandl.com/" target="_blank">Quandl and
+                        Sharadar</a>
+                </p>
+
+            </div> <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

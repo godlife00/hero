@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="월가히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="월가히어로">
+    <!-- <meta property="og:image" content="favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://월가히어로">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<div class="globalStock">
+
+    <div id="wrap">
+        <div id="header" class="header sch_heaher">
+            <!-- 헤더 타입 4 (ex 종목검색 등) -->
+            <div class="ninja-btn navToggle" title="menu">
+                <a class="menu-trigger btn_hamburger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+
+            <div class="history_back back_sch" title="이전페이지">
+                <a class="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!-- //history_back -->
+
+            <div class="headerTop">
+                <h1 class="headerLogo"><a href="">종목검색</a></h1>
+                <div class="hm">
+                    <a href="../search/searching.html" class="go_sch"><img src="../img/icon_searchBlcakc@2x.png"
+                            alt="검색하기" searchbtn=""></a>
+                </div>
+            </div>
+            <!-- //headerTop -->
+
+            <!--메뉴전체 판넬 -->
+            <div class="panel left">
+                <h3 class="panel_title">월가히어로</h3>
+                <!-- 메뉴의 내용부분 -->
+                <ul class="menu">
+                    <li><a href="">종목추천</a></li>
+                    <li><a href="">종목분석</a></li>
+                    <li><a href="">전종목 투자매력도</a></li>
+                    <li><a href="">투자레시피</a></li>
+                    <li><a href="">대가의 종목</a></li>
+                    <li><a href="">미국주식 탐구생활</a></li>
+                </ul>
+
+                <div class="btm">
+                    <ul>
+                        <li><a href=""><i class="panel_alarm"><img src="../img/icon_alarm@2x.png" alt=""> <strong
+                                        class="alarm_dot">확인안함</strong> </i> 알림</a></li>
+                        <li><a href=""><i class="panel_home"><img src="../img/icon_home@2x.png" alt=""></i>
+                                서비스소개</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--메뉴전체 판넬 -->
+
+            <!--메뉴 밖에 어두워지는 부분-->
+            <div class="panel-overlay"></div>
+        </div>
+
+        <!-- 종목검색 class = sub_search-->
+        <div id="container" class="sub_search">
+            <!-- 주요 콘텐츠 -->
+            <div class="search_top">
+                <div class="data_area">
+                    <h2 class="title" title="Microsoft Corp"><a href="#">월트디즈니</a></h2>
+                    <ul class="info">
+                        <li class="sum"><span class="eng">MSFT</span> </li>
+                    </ul>
+                    <ul class="detail">
+                        <li class="num">
+                            <span class="increase">190.0</span> <!-- increase 증가, decrease 감소 -->
+                        </li>
+                        <li class="per">
+                            <span class="increase">+2.26 <span>(+1.20%)</span></span> <!-- increase 증가, decrease 감소 -->
+                        </li>
+                        <li class="day">19.05/15, USD</li>
+                    </ul>
+
+                    <div class="go_page">
+                        <span class="quarter recom">추천</span>
+                        <!-- 추천 class = recom, 분석 class = analysis -->
+                        <a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- //data_area -->
+                <ul class="info_icon">
+                    <li>배당매력주</li>
+                    <li>NASDAQ</li>
+                    <li>소비자독점주</li>
+                    <li>이익성장주</li>
+                    <li>버핏투자주</li>
+                </ul>
+                <!-- //info_icon -->
+                <div class="opinion_area">
+                    <!-- 매수,매도 선택 전 -->
+                    <div class="user_select prev">
+                        <!-- 선택전 -->
+                        <span class="title">의견</span>
+                        <ul class="detail">
+                            <li class="myOpinion deal">
+                                <span class="buying chk"><i></i>매수</span> <!-- chk 로 구분 -->
+                                <span class="sell"><i></i>매도</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //매수,매도 선택 전 -->
+
+                    <!-- 매수,매도 선택 후 -->
+                    <div class="user_select next">
+                        <span class="title">의견</span>
+
+                        <div class="skillbarArea">
+                            <div class="zt-span6 last">
+                                <span class="inbox"><img
+                                        src="http://menu.itooza.com/globalstock/img/icon/buying_chk.png"
+                                        alt="매수"></span>
+
+                                <div class="zt-skill-bar">
+                                    <div style="width: 70%;"></div>
+                                    <!-- 매수 의견 %만큼 width 입력 -->
+                                </div>
+                                <span class="inbox"><img src="http://menu.itooza.com/globalstock/img/icon/sell_chk.png"
+                                        alt="매도"></span>
+                            </div>
+                            <div class="share_num">
+                                <span class="buying">70% <span>(787)</span></span>
+                                <span class="sell">30% <span>(47)</span></span>
+                            </div>
+                            <!-- //share_num -->
+                        </div>
+                        <!-- //skillbarArea -->
+                        <span class="select_ch">변경</span>
+                    </div>
+                    <!-- //매수,매도 선택 후 -->
+
+                </div>
+                <!-- //opinion_area -->
+            </div>
+            <!-- //sub_top -->
+
+            <div class="sub_mid tabs_area">
+                <ul class="tabs_5">
+                    <li><a href="">종목진단</a></li>
+                    <li><a href="">재무제표</a></li>
+                    <li class="active"><a href="">투자지표</a></li>
+                    <li><a href="">배당</a></li>
+                </ul>
+                <!-- //tabs_5 -->
+
+                <div class="search_financials_area">
+                    <div class="tabs_menu">
+                        <span class="active">연환산</span>
+                        <span>연간</span>
+                        <span>분기</span>
+                    </div>
+                    <!-- //tabs_menu -->
+                    <table cellspacing="0" border="1" class="tableRanking table_search_invest">
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h4 class="tltle">투자지표</h4>
+                                </th>
+                                <th><span>19.09.30</span></th>
+                                <th><span>19.06.30</span></th>
+                                <th><span>19.03.31</span></th>
+                                <th><span>18.12.31</span></th>
+                                <th><span>18.09.30</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="th_guide"><span class="show">EPS</span></td>
+                                <td>7.47</td>
+                                <td>6.05</td>
+                                <td>5.11</td>
+                                <td>4.91</td>
+                                <td>5.01</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>BPS</span></td>
+                                <td>73.01</td>
+                                <td>67.14</td>
+                                <td>61.12</td>
+                                <td>53.44</td>
+                                <td>51.89</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>DPS</span></td>
+                                <td>1.72</td>
+                                <td>1.70</td>
+                                <td>1.68</td>
+                                <td>1.66</td>
+                                <td>1.64</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>PER</span></td>
+                                <td>6.14</td>
+                                <td>7.97</td>
+                                <td>8.02</td>
+                                <td>8.13</td>
+                                <td>8.86</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>PBR</span></td>
+                                <td>0.65</td>
+                                <td>0.74</td>
+                                <td>0.70</td>
+                                <td>0.77</td>
+                                <td>0.90</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>PSR</span></td>
+                                <td>0.65</td>
+                                <td>0.72</td>
+                                <td>0.59</td>
+                                <td>0.60</td>
+                                <td>0.68</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>ROE</span></td>
+                                <td>11.80%</td>
+                                <td>10.50%</td>
+                                <td>9.40%</td>
+                                <td>9.30%</td>
+                                <td>9.50%</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>ROA</span></td>
+                                <td>1.00%</td>
+                                <td>0.80%</td>
+                                <td>0.70%</td>
+                                <td>0.70%</td>
+                                <td>0.70%</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>ROIC</span></td>
+                                <td>1.30%</td>
+                                <td>1.10%</td>
+                                <td>0.90%</td>
+                                <td>0.90%</td>
+                                <td>0.70%</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>부채비율</span></td>
+                                <td>986.10%</td>
+                                <td>1,047.00%</td>
+                                <td>1,118.50%</td>
+                                <td>1,203.20%</td>
+                                <td>1,252.60%</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>유동비율</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="th_guide"><span>이자보상<br>배수</span>
+                                    <div class="guide_box hide">
+                                        <ul>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="table_guide">* 재무데이터는 달러(USD)로 일괄조정</p>
+
+                    <!-- 테이블 안내 툴팁 -->
+                    <div class="th_guide_hide">
+                        <div class="guide_box"><ul><li>주당순이익(달러)</li></ul></div><!-- EPS -->
+                        <div class="guide_box"><ul><li>주당순자산(달러)</li></ul></div><!-- BPS -->
+                        <div class="guide_box"><ul><li>주당배당금(달러)</li></ul></div><!-- DPS -->
+                        <div class="guide_box"><ul><li>주가수익배수(배)</li></ul></div><!-- PER -->
+                        <div class="guide_box"><ul><li>주가순자산비율(배)</li></ul></div><!-- PBR -->
+                        <div class="guide_box"><ul><li>주가매출액배수(배)</li></ul></div><!-- PSR -->
+                        <div class="guide_box"><ul><li>자기자본이익률</li></ul></div><!-- ROE -->
+                        <div class="guide_box"><ul><li>총자산이익률</li></ul></div><!-- ROA -->
+                        <div class="guide_box"><ul><li>투하자본이익률</li></ul></div><!-- ROIC -->
+                    </div>
+                    <!-- //th_guide_hide -->
+
+                </div>
+                <!-- //search_financials_area -->
+            </div>
+            <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div class="guide_layer"></div>
+
+    </body>

@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="월가히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="월가히어로">
+    <!-- <meta property="og:image" content="favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://월가히어로">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="js/chartjs.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/globalstock.css" />
+    <!-- js -->
+    <script src="js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+
+    <!-- 서비스장애 상단배너 -->
+    <div class="limit_banner">
+        <p>시스템정비로 <a href="#">서비스가 일시 중지</a> 됩니다. (11/5, 4시~최대10분) <a href="#" class="btn_close">X</a></p>
+    </div>
+    <script language="Javascript" type="text/javascript">
+        $('.globalStock .limit_banner p .btn_close').on("click", function () {
+            $('.globalStock .limit_banner').slideUp();
+        })
+    </script>
+
+    <!-- 알림 영역 -->
+    <div class="alarmArea">
+        <!-- class = schFocus 로 검색, 자동완성 레이어 노출됩니다. -->
+        <!-- 알림 리스트 -->
+        <div class="layer_header">
+            <div class="history_back" title="이전페이지">
+                <a class="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!-- //history_back -->
+            <div class="headerTop">
+                <h1 class="headerLogo"><a href="">알림</a></h1>
+            </div>
+            <!-- //headerTop -->
+        </div>
+        <!-- //layer_header -->
+        <div class="alarmList">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다. 신규 종목추천이 등록되었습니다. 신규 종목추천이 등록되었습니다. -
+                            <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다. -
+                            <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다. - <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다. - <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다. - <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다. - <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">종목추천</span>
+                        <span class="day">12/23</span>
+                        <span class="sum">신규 종목추천이 등록되었습니다.신규 종목추천이 등록되었습니다. - <span>애플(APPL)</span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- //alarmList -->
+    </div>
+    <!-- //alarmArea 알람 -->
+
+    <div id="wrap">
+        <div id="header" class="header">
+            <!-- 헤더 타입 1 (ex 메인 등) -->
+            <div class="ninja-btn navToggle" title="menu">
+                <a class="menu-trigger btn_hamburger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <!-- <span>
+                    <img src="img/btn_hamburger.png" alt="메뉴바 열기" class="btn_hamburger">
+                </span> -->
+            </div>
+            <div class="headerTop">
+                <h1 class="headerLogo"><span>월가히어로</span>
+                </h1>
+                <div class="hm">
+                    <!-- 확인안한 알림이 있는 경우 class = alarm 보여짐 -->
+                    <span class="alarm"><img src="img/icon_alarm@2x.png" alt="알림"> <i>확인안함</i></span>                    
+                </div>
+                <!-- //hm -->
+
+            </div>
+            <!-- //headerTop -->
+            <!-- 종목명 검색창 -->
+            <div class="searchArea">
+                <form action="">
+                    <fieldset>
+                        <a href="search/searching.html" style="display: block;">
+                            <input type="text" placeholder="종목명 또는 심볼을 입력하세요.." class="searchInput">
+                            <input type="image" src="img/icon_searchB@2x.png" alt="검색" class="searchBtn">
+                        </a>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- //종목명 검색창 -->
+            <div class="tagTop">
+                <ul>
+                    <li><a href="">아마존</a></li>
+                    <li><a href="">넥플릭스</a></li>
+                    <li><a href="">넥플릭스</a></li>
+                </ul>
+            </div>
+            <!-- //tagTop -->
+
+            <!-- 검색결과 요약 -->
+            <div class="schSummary navFixed">
+                <!--  //검색창 상단고정 class = navFixed -->
+                <h2 class="headerLogo"><a href="">월가히어로</a></h2>
+                <span>Alphabet</span>
+                <a href=""><span>검색</span></a>
+            </div>
+            <!-- //검색결과 요약 -->
+
+            <!--메뉴전체 판넬 -->
+            <div class="panel left">
+                <h3 class="panel_title">월가히어로</h3>
+                <!-- 메뉴의 내용부분 -->
+                <ul class="menu">
+                    <li><a href="">종목추천</a></li>
+                    <li><a href="">종목분석</a></li>
+                    <li><a href="">전종목 투자매력도</a></li>
+                    <li><a href="">투자레시피</a></li>
+                    <li><a href="">대가의 종목</a></li>
+                    <li><a href="">미국주식 탐구생활</a></li>
+                </ul>
+
+                <div class="btm">
+                    <ul>
+                        <li class="ttt"><i class="panel_alarm"><img src="img/icon_alarm@2x.png" alt=""> <strong
+                                        class="alarm_dot">확인안함</strong> </i> 알림</li>
+                        <li><a href=""><i class="panel_home"><img src="img/icon_info@2x.png" alt=""></i> 서비스소개</a></li>
+                        <li class=""><a href="http://wallphp.quandl3.hamt.kr/"><i class="panel_home"><img src="img/icon_home@2x.png" alt=""></i> 메인페이지로 가기</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--메뉴전체 판넬 -->
+
+            <!--메뉴 밖에 어두워지는 부분-->
+            <div class="panel-overlay"></div>
+        </div>
+
+        <div id="container">
+            <!-- 주요 콘텐츠 -->
+            <div class="main_top">
+                <div class="tabsArea_main bdr_radius">
+                    <ul class="tabs set_tabs set_exist"> <!-- 설정버튼이 있는 경우 class = set_exist, 없는 경우 삭제 -->
+                        <li class="active" rel="tab1">배당매력주</li>
+                        <li rel="tab2">최신검색</li>
+                        <li rel="tab3">최근 실적발표</li>
+                    </ul>
+                    <span class="set"><i></i> 설정</span>                         
+                    <div class="tab_container">
+                        <!-- 배당매력주 -->
+                        <div id="tab1" class="tab_content">
+                            <table cellspacing="0" border="0" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="100px">
+                                    <col width="80px">
+                                    <col width="110px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td class="data_guide t04">주가</td>
+                                        <td class="data_guide t01">배당매력</td>
+                                        <td class="data_guide t02">주당배당금</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on half">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">마이크로소프트<span class="ticker">Microsoft Corp</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR">별3</span>
+                                                    <span class="starR">별4</span>
+                                                    <span class="starR">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>16.0</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>1.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>78.32 달러</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span>
+                                                    <!-- class = starR on 인 경우 별표시-->
+                                                    <span class="starR on">별2</span>
+                                                    <span class="starR on">별3</span>
+                                                    <span class="starR on">별4</span>
+                                                    <span class="starR on">별5</span>
+                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>3.32 달러</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //배당매력주 -->
+                        <!-- 최신검색 -->
+                        <div id="tab2" class="tab_content tab_view">
+                            <table cellspacing="0" border="0" class="tableRanking">
+                                <colgroup>
+                                    <col width="100px">
+                                    <col width="80px">
+                                    <col width="110px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3" class="data_guide t01">투자매력</td>
+                                        <td class="data_guide t02">투자의견</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>88점</span></td>
+                                        <td class="recom"><span>강력매수</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>88점</span></td>
+                                        <td class="recom"><span>매수</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>88점</span></td>
+                                        <td class="recom"><span>강력매수</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>88점</span></td>
+                                        <td class="recom"><span>매수</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>86.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="score"><span>88점</span></td>
+                                        <td class="recom"><span>강력매수</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //최신검색 -->
+                        <!-- 최근 실적발표 -->
+                        <div id="tab3" class="tab_content">
+                            <table cellspacing="0" border="0" class="tableRanking">
+                                <colgroup>
+                                    <col width="100px">
+                                    <col width="80px">
+                                    <col width="110px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="data_guide t03">주가</td>
+                                        <td class="data_guide t03">발표순이익</td>
+                                        <td class="data_guide t03">전년대비</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="profit">
+                                            <span>60<span class="dollar">백만달러</span></span>
+                                        </td>
+                                        <td class="moti">
+                                            <span class="increase">203%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="decrease">-2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="profit">
+                                            <span class="increase">2203</span>
+                                        </td>
+                                        <td class="moti">
+                                            <span class="increase">234%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="profit">
+                                            <span class="increase">203</span>
+                                        </td>
+                                        <td class="moti">
+                                            <span class="increase">2303%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="profit">
+                                            <span class="increase">24,203</span>
+                                        </td>
+                                        <td class="moti">
+                                            <span class="increase">4,203%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title">
+                                            <a href="">애플 <span class="ticker">AAPL</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>186.60</span>
+                                            <span class="increase">+2.66%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td class="profit">
+                                            <span class="increase">23</span>
+                                        </td>
+                                        <td class="moti">
+                                            <span class="increase">203%</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //최근 실적발표 -->
+                    </div>
+                    <!-- .tab_container -->
+                </div>
+                <!-- //tabsArea_main -->
+            </div>
+            <!-- //main_top -->
+
+            <div class="main_mid eventPicks_area">
+                <h3 class="title"><a href="">종목추천</a></h3>
+                <a href="#" class="more"><img src="img/more_Black@2x.png" alt="더보기"></a>
+                <div class="chart_area">
+                    <div class="chartData">
+                        <h4 class="event_name"><a href="">마이크로소프트</a></h4>
+                        <ul class="detail">
+                            <li class="num"><span class="increase">186.60</span></li>
+                            <li class="per"><span class="increase">+2.26%</span> <!-- increase 증가, decrease 감소 -->
+                            </li>
+                        </ul>
+                        <!-- //detail -->
+                        <div id="containerM1" class="containerM1"></div><!-- 종목추천 id = containerM1 -->
+                    </div>
+                    <!-- //chartData -->
+                    <div class="chartGoal">
+                        <dl>
+                            <dt>추천가</dt>
+                            <dd>253.03</dd>
+                        </dl>
+                        <dl>
+                            <dt>목표가</dt>
+                            <dd>1265.03</dd>
+                        </dl>
+                    </div>
+                    <!-- //chartGoal -->
+                </div>
+            </div>
+            <!-- //eventPicks_area -->
+
+            <div class="main_mid event_anay">
+                <h3 class="title"><a href="">종목분석</a></h3>
+                <a href="#" class="more"><img src="img/more_Black@2x.png" alt="더보기"></a>
+
+                <div class="slideChartArea">
+                    <div class="swiper-container swiper-slideCharM">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="decrease">186.60</span></li>
+                                            <li class="per"><span class="decrease">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <!-- 투자의견 -->
+                                    <div class="opinion">
+                                        <span class="invest">애널리스트 컨센서스</span>
+                                        <span class="recom buying">강력매수</span>
+                                        <!-- 매수 : class = buying, 매도 : class = sell -->
+                                    </div>
+                                    <!-- //opinion -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">투자매력</dt>
+                                            <dd class="charm_num">80</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="value">벨류에이션</dt>
+                                            <dd class="just">
+                                                <figure class="highcharts-figure">
+                                                    <div id="containerM2_1" class="containerM2"></div>
+                                                    <span class="proper">적정가</span>
+                                                </figure>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">아마존</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="increase">186.60</span></li>
+                                            <li class="per"><span class="increase">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <!-- 투자의견 -->
+                                    <div class="opinion">
+                                        <span class="invest">애널리스트 컨센서스</span>
+                                        <span class="recom sell">강력매도</span>
+                                        <!-- 매수 : class = buying, 매도 : class = sell -->
+                                    </div>
+                                    <!-- //opinion -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">투자매력</dt>
+                                            <dd class="charm_num">25</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="value">벨류에이션</dt>
+                                            <dd class="just">
+                                                <figure class="highcharts-figure">
+                                                    <div id="containerM2_2" class="containerM2"></div>
+                                                    <span class="proper">적정가</span>
+                                                </figure>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">월트디즈니</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="decrease">186.60</span></li>
+                                            <li class="per"><span class="decrease">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <!-- 투자의견 -->
+                                    <div class="opinion">
+                                        <span class="invest">애널리스트 컨센서스</span>
+                                        <span class="recom buying">강력매수</span>
+                                        <!-- 매수 : class = buying, 매도 : class = sell -->
+                                    </div>
+                                    <!-- //opinion -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">투자매력</dt>
+                                            <dd class="charm_num">88</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="value">벨류에이션</dt>
+                                            <dd class="just">
+                                                <figure class="highcharts-figure">
+                                                    <div id="containerM2_3" class="containerM2"></div>
+                                                    <span class="proper">적정가</span>
+                                                </figure>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">월트디즈니</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="decrease">186.60</span></li>
+                                            <li class="per"><span class="decrease">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <!-- 투자의견 -->
+                                    <div class="opinion">
+                                        <span class="invest">애널리스트 컨센서스</span>
+                                        <span class="recom buying">강력매수</span>
+                                        <!-- 매수 : class = buying, 매도 : class = sell -->
+                                    </div>
+                                    <!-- //opinion -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">투자매력</dt>
+                                            <dd class="charm_num">88</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="value">벨류에이션</dt>
+                                            <dd class="just">
+                                                <figure class="highcharts-figure">
+                                                    <div id="containerM2_4" class="containerM2"></div>
+                                                    <span class="proper">적정가</span>
+                                                </figure>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">애플</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="decrease">186.60</span></li>
+                                            <li class="per"><span class="decrease">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <!-- 투자의견 -->
+                                    <div class="opinion">
+                                        <span class="invest">애널리스트 컨센서스</span>
+                                        <span class="recom buying">강력매수</span>
+                                        <!-- 매수 : class = buying, 매도 : class = sell -->
+                                    </div>
+                                    <!-- //opinion -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">투자매력</dt>
+                                            <dd class="charm_num">88</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt class="value">벨류에이션</dt>
+                                            <dd class="just">
+                                                <figure class="highcharts-figure">
+                                                    <div id="containerM2_5" class="containerM2"></div>
+                                                    <span class="proper">적정가</span>
+                                                </figure>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                        </div>
+                        <!-- //swiper-wrapper -->
+                    </div>
+                    <!-- //swiper-container -->
+                </div>
+                <!-- slideChartArea -->
+
+
+            </div>
+            <!-- //event_anay -->
+
+            <div class="main_mid research_area">
+                <h3 class="title"><a href="">미국주식 탐구생활</a></h3>
+                <a href="#" class="more"><img src="img/more_Black@2x.png" alt="더보기"></a>
+
+                <ul class="lst_type">
+                    <li>
+                        <dl class="lst_type2">
+                            <dt class="tit"><a href="#"><strong>10년간 시가총액이 가장 높은 기업은 어디일까요?</strong></a></dt>
+                            <dd class="photo"><a href="#"></a></dd>
+                            <dd class="txt"><a href="#">그래프로 보는 시가총액 TOP 15</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="lst_type2">
+                            <dt class="tit"><a href="#"><strong>10년간 시가총액이 가장 높은 기업은 어디일까요?</strong></a></dt>
+                            <dd class="photo"><a href="#"><img src="img/research_face.png" alt=""></a></dd>
+                            <dd class="txt"><a href="#">그래프로 보는 시가총액 TOP그래프로 보는 시가총액 TOP그래프로 보는 시가총액 TOP 15</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="lst_type2">
+                            <dt class="tit"><a href="#"><strong>10년간 시가총액이 가장 높은 기업은 어디일까요?</strong></a></dt>
+                            <dd class="photo"><a href="#"><img src="img/research_face.png" alt=""></a></dd>
+                            <dd class="txt"><a href="#">그래프로 보는 시가총액 TOP 15</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <!-- //research_area -->
+
+            <div class="main_mid master_area">
+                <h3 class="title"><a href="">대가의 종목</a></h3>
+                <a href="#" class="more"><img src="img/more_Black@2x.png" alt="더보기"></a>
+
+                <div class="swiper-container swiper-master">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="master_slide">
+                                <dl class="master">
+                                    <dt class="name">워렌버핏 <span>(Warrent Buffett)</span></dt>
+                                    <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                                    <dd class="img"><img src="img/warrent_Buffett_ra.png" alt="워렌버핏"></dd>
+                                </dl>
+                                <p class="tag"><span>#스타벅스</span> <span>#애플</span><span>#스타벅스</span> <span>#애플</span><span>#스타벅스</span> <span>#애플</span></p>
+                            </a>
+                            <!-- //master_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="master_slide">
+                                <dl class="master">
+                                    <dt class="name">야크만 에셋 <span>(Yakman Assets)</span></dt>
+                                    <dd class="sum">현존하는 최고의 투자</dd>
+                                    <dd class="img"><img src="img/yakman_assets_ra.png" alt="야크만 에셋"></dd>
+                                </dl>
+                                <p class="tag"><span>#스타벅스</span> <span>#애플</span></p>
+                            </div>
+                            <!-- //master_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="master_slide">
+                                <dl class="master">
+                                    <dt class="name">세스 클레먼 <span>(Seth Cleman)</span></dt>
+                                    <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                                    <dd class="img"><img src="img/seth_cleman_ra.png" alt="세스 클레먼"></dd>
+                                </dl>
+                                <p class="tag"><span>#스타벅스</span> <span>#애플</span></p>
+                            </div>
+                            <!-- //master_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="master_slide">
+                                <dl class="master">
+                                    <dt class="name">빌 나이그렌 <span>(Bill Nigren)</span></dt>
+                                    <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                                    <dd class="img"><img src="img/bill_nigren_ra.png" alt="빌 나이그렌"></dd>
+                                </dl>
+                                <p class="tag"><span><a href="">#스타벅스</a></span>
+                                    <span><a href="">#애플</a></span>
+                            </div>
+                            <!-- //master_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="master_slide">
+                                <dl class="master">
+                                    <dt class="name">워렌버핏 <span>(Warrent Buffett)</span></dt>
+                                    <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                                    <dd class="img"><img src="img/warrent_Buffett_ra.png" alt="워렌버핏"></dd>
+                                </dl>
+                                <p class="tag"><span><a href="">#스타벅스</a></span>
+                                    <span><a href="">#애플</a></span>
+                            </div>
+                            <!-- //master_area -->
+                        </div>
+                        <!-- //swiper-slide -->
+                    </div>
+                    <!-- //swiper-wrapper -->
+                </div>
+                <!-- //swiper-master -->
+            </div>
+            <!-- //master_area -->
+
+            <div class="main_mid charm_area">
+                <h3 class="title"><a href="">전종목 투자매력도</a></h3>
+                <a href="#" class="more"><img src="img/more_Black@2x.png" alt="더보기"></a>
+
+                <div class="slideChartArea">
+                    <div class="swiper-container swiper-charm">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num">
+                                                <span class="decrease">165.95</span> <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                            <li class="per">
+                                                <span class="decrease">-0.48 <span>(-0.29%)</span></span> <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">80</dt>
+                                            <dd class="charm_num">투자매력</dd>
+                                        </dl>
+                                        <div id="containerM3_1" class="containerM3"></div>
+                                    </div>
+                                    <!-- //chartbtm -->
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num">
+                                                <span class="increase">165.95</span> <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                            <li class="per">
+                                                <span class="increase">-0.48 <span>(-0.29%)</span></span> <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">80</dt>
+                                            <dd class="charm_num">투자매력</dd>
+                                        </dl>
+                                        <div id="containerM3_2" class="containerM3"></div>
+
+                                    </div>
+                                    <!-- //chartbtm -->
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="increase">186.60</span></li>
+                                            <li class="per"><span class="increase">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">80</dt>
+                                            <dd class="charm_num">투자매력</dd>
+                                        </dl>
+                                        <div id="containerM3_3" class="containerM3"></div>
+
+                                    </div>
+                                    <!-- //chartbtm -->
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="increase">186.60</span></li>
+                                            <li class="per"><span class="increase">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">80</dt>
+                                            <dd class="charm_num">투자매력</dd>
+                                        </dl>
+                                        <div id="containerM3_4" class="containerM3"></div>
+
+                                    </div>
+                                    <!-- //chartbtm -->
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="increase">186.60</span></li>
+                                            <li class="per"><span class="increase">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">80</dt>
+                                            <dd class="charm_num">투자매력</dd>
+                                        </dl>
+                                        <div id="containerM3_5" class="containerM3"></div>
+
+                                    </div>
+                                    <!-- //chartbtm -->
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="chart_area">
+                                    <div class="chartData">
+                                        <h4 class="event_name">마이크로소프트</h4>
+                                        <ul class="detail">
+                                            <li class="num"><span class="increase">186.60</span></li>
+                                            <li class="per"><span class="increase">-2.26%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+
+                                    <div class="chartbtm">
+                                        <dl>
+                                            <dt class="charm">80</dt>
+                                            <dd class="charm_num">투자매력</dd>
+                                        </dl>
+                                        <div id="containerM3_6" class="containerM3"></div>
+
+                                    </div>
+                                    <!-- //chartbtm -->
+                                </div>
+                                <!-- //chart_area -->
+                            </div>
+                            <!-- //swiper-slide -->
+                        </div>
+                        <!-- //swiper-wrapper -->
+                    </div>
+                    <!-- //swiper-charm -->
+                </div>
+                <!-- //slideChartArea -->
+
+            </div>
+            <!-- //charm_area -->
+
+            <!-- 투자 레시피 -->
+            <div class="main_btm recipe_area">
+                <h3 class="title"><a href="/stock/recipe">투자레시피</a></h3>
+                <a href="/stock/recipe" class="more"><img src="img/more_Black@2x.png" alt="더보기"></a>
+                <div class="tabsArea_2">
+                    <ul class="tabs_2">
+                        <li rel="tab4" class="active">배당매력주</li>
+                        <li rel="tab5" class="">이익성장주</li>
+                        <li rel="tab6" class="">소비자독점</li>
+                        <li class="" rel="tab7">슈퍼스톡</li>
+                    </ul>
+                    <div class="tab_container">
+                        <!-- 슈퍼스톡 -->
+                        <div id="tab7" class="tab_content" style="display: none;">
+                            <div class="remark">
+                                <p>슈퍼스톡 <br> “뛰는 주 위에 나는 주, 슈퍼종목을 찾아라!”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="0" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td class="data_guide t01">주가</td>
+                                        <td class="data_guide t01">투자매력</td>
+                                        <td class="data_guide t02">5년 ROE</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/ITIC">인베스터스 타이틀 컴퍼니<span class="ticker">ITIC</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>157.50</span>
+                                            <span class="increase">+1.48%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>12.86 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/IBCP">인디펜던트 뱅크/MI<span class="ticker">IBCP</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>18.21</span>
+                                            <span class="decrease">-1.14%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>10.40 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/LARK">랜드마크 뱅코프<span class="ticker">LARK</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>23.40</span>
+                                            <span class="decrease">-7.87%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>10.40 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/HCI">HCI 그룹<span class="ticker">HCI</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>51.40</span>
+                                            <span class="decrease">-2.26%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on half">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>11.34 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/MED">메디패스트<span class="ticker">MED</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>195.18</span>
+                                            <span class="decrease">-1.97%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on half">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>40.05 %</span>
+                                        </td>
+                                    </tr>
+                                                                    </tbody>
+                            </table>
+                        </div>
+                        <!-- //슈퍼스톡 -->
+                        <!-- 배당매력주 -->
+                        <div id="tab4" class="tab_content" style="display: block;">
+                            <div class="remark">
+                                <p>초보도 벌 수 있는 투자의 정석 <br> “고배당주에 투자하라”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="0" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td class="data_guide t04">주가</td>
+                                        <td class="data_guide t01">배당매력</td>
+                                        <td class="data_guide t02">배당수익률</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/CRWS">크라운 크래프트<span class="ticker">CRWS</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>6.92</span>
+                                            <span class="increase">+1.47%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>12.00 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/EARN">엘링턴 레지덴셜 모기지 리츠<span class="ticker">EARN</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>12.52</span>
+                                            <span class="decrease">-1.73%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>10.90 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/APAM">아티잔 파트너스 에셋 매니지먼트<span class="ticker">APAM</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>49.91</span>
+                                            <span class="decrease">-0.32%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>10.50 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/BKE">버클<span class="ticker">BKE</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>29.84</span>
+                                            <span class="decrease">-0.80%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>9.40 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/HCFT">헌트 컴퍼니즈 파이낸스 트러스트<span class="ticker">HCFT</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>3.35</span>
+                                            <span class="increase">+3.72%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>9.10 %</span>
+                                        </td>
+                                    </tr>
+                                                                        
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //배당매력주 -->
+                        <!-- 이익성장주 -->
+                        <div id="tab5" class="tab_content" style="display: none;">
+                            <div class="remark">
+                                <p>위대한 기업을 찾는 공식 <br> “내일의 넷플릭스를 찾아라”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="0" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td class="data_guide t01">주가</td>
+                                        <td class="data_guide t01">수익성장성</td>
+                                        <td class="data_guide t02">순이익성장률</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/CPB">캠벨 수프<span class="ticker">CPB</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>48.32</span>
+                                            <span class="increase">+1.58%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>871.67 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/ALGN">얼라인 테크놀러지<span class="ticker">ALGN</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>530.71</span>
+                                            <span class="increase">+0.15%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>321.88 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/AMD">어드밴스드 마이크로 디바이스<span class="ticker">AMD</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>93.23</span>
+                                            <span class="decrease">-2.80%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>289.47 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/ABB">ABB<span class="ticker">ABB</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>27.40</span>
+                                            <span class="increase">+0.33%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>263.89 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/EBAY">이베이<span class="ticker">EBAY</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>51.57</span>
+                                            <span class="decrease">-2.81%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>227.40 %</span>
+                                        </td>
+                                    </tr>
+                                                                    </tbody>
+                            </table>
+                        </div>
+                        <!-- //이익성장주 -->
+                        <!-- 소비자독점 -->
+                        <div id="tab6" class="tab_content" style="display: none;">
+                            <div class="remark">
+                                <p>스노우볼 투자전략의 핵심 <br> “소비자 독점 기업을 찾아라”</p>
+                            </div>
+                            <!-- //remark -->
+                            <table cellspacing="0" border="0" class="tableRanking type_2Line">
+                                <colgroup>
+                                    <col width="80px">
+                                    <col width="80px">
+                                    <col width="100px">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td class="data_guide t01">주가</td>
+                                        <td class="data_guide t01">사업독점력</td>
+                                        <td class="data_guide t02">영업이익률</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/HDB">HDFC 은행<span class="ticker">HDB</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>68.35</span>
+                                            <span class="decrease">-2.97%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>54.27 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/MA">마스터카드<span class="ticker">MA</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>334.37</span>
+                                            <span class="decrease">-1.75%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>54.00 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/MKTX">마켓액세스 홀딩스<span class="ticker">MKTX</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>578.44</span>
+                                            <span class="decrease">-0.08%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>53.11 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/EXR">엑스트라 스페이스 스토리지<span class="ticker">EXR</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>114.22</span>
+                                            <span class="increase">+1.54%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>47.44 %</span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td class="title">
+                                            <a href="/search/invest_charm/BCH">방코 데 칠레<span class="ticker">BCH</span></a>
+                                        </td>
+                                        <td class="num">
+                                            <span>20.34</span>
+                                            <span class="increase">+0.44%</span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </td>
+                                        <td>
+                                            <div class="star_area">
+                                                <div class="starRev">
+                                                    <span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span><span class="starR on">별1</span>                                                </div>
+                                            </div>
+                                            <!-- //star_area -->
+                                        </td>
+                                        <td class="allocation">
+                                            <span>46.09 %</span>
+                                        </td>
+                                    </tr>
+                                                                    </tbody>
+                            </table>
+                        </div>
+                        <!-- //소비자독점 -->
+                    </div>
+                    <!-- .tab_container -->
+                </div>
+                <!-- //tabsArea -->
+            </div>
+            <!-- //main_btm //recipe_area -->
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer">
+            <div class="notice">
+                <p> 본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 데이터히어로는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+            </div>
+            <!-- //notice -->
+            <div>
+                <img src="img/f_logo.png" alt="데이터히어로" class="f_logo">
+                <p class="dataLink">data from <strong>Quandl and Sharadar</strong></p>
+            </div>
+        </div>
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

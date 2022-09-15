@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="월가히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="월가히어로">
+    <!-- <meta property="og:image" content="favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://월가히어로">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+    <div id="wrap">
+        <div id="header" class="header">
+            <!-- 헤더 타입 2 (ex 종목추천 등) -->
+            <div class="ninja-btn navToggle" title="menu">
+                <a class="menu-trigger btn_hamburger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="headerTop">
+                <a href="" class="home"><img src="../img/icon_home@2x.png" alt="홈으로 가기"></a>
+                <h1 class="headerLogo"><a href="">대가의종목</a>
+                </h1>
+
+                <div class="hm">
+                    <a href="../search/searching.html" class="go_sch"><img src="../img/icon_search@2x.png" alt="검색하기"
+                            searchbtn=""></a>
+                </div> <!-- //hm -->
+
+            </div>
+            <!-- //headerTop -->
+
+            <!-- 검색결과 요약 -->
+            <div class="schSummary navFixed">
+                <!--  //검색창 상단고정 class = navFixed -->
+                <h2 class="headerLogo"><a href="">월가히어로</a></h2>
+                <span>Alphabet</span>
+                <a href=""><span>검색</span></a>
+            </div>
+            <!-- //검색결과 요약 -->
+
+            <!--메뉴전체 판넬 -->
+            <div class="panel left">
+                <h3 class="panel_title">월가히어로</h3>
+                <!-- 메뉴의 내용부분 -->
+                <ul class="menu">
+                    <li><a href="">종목추천</a></li>
+                    <li><a href="">종목분석</a></li>
+                    <li><a href="">전종목 투자매력도</a></li>
+                    <li><a href="">투자레시피</a></li>
+                    <li><a href="">대가의 종목</a></li>
+                    <li><a href="">미국주식 탐구생활</a></li>
+                </ul>
+
+                <div class="btm">
+                    <ul>
+                        <li><a href=""><i class="panel_alarm"><img src="../img/icon_alarm@2x.png" alt=""> <strong
+                                        class="alarm_dot">확인안함</strong> </i> 알림</a></li>
+                        <li><a href=""><i class="panel_home"><img src="../img/icon_home@2x.png" alt=""></i> 서비스소개</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--메뉴전체 판넬 -->
+
+            <!--메뉴 밖에 어두워지는 부분-->
+            <div class="panel-overlay"></div>
+        </div>
+
+        <!-- 대가의종목 class = sub_master-->
+        <div id="container" class="sub_master">
+            <!-- 주요 콘텐츠 -->
+            <div class="sub_mid master_area">
+                <div class="layer_box">
+                    <dl class="master">
+                        <dt class="name">워렌버핏 <span>(Warrent Buffett)</span></dt>
+                        <dd class="sum">뛰어난 투자실력과 기부 활동의 ’오마하의 현인'이라고 불리는 투자대가</dd>
+                        <dd class="img"><img src="../img/warrent_Buffett_ra.png" alt="워렌버핏"></dd>
+                    </dl>
+                    <div class="spec_table">
+                        <dl>
+                            <dt class="th">편입종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">신규 매수 종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">10년 연평균 수익률</dt>
+                            <dd class="td increase">+34.23%</dd>
+                        </dl>
+                    </div>
+                    <!-- //spec_table -->
+                    <div class="tag">
+                        <h3 class="title">대표종목</h3>
+                        <span><a href="">스타벅스</a></span>
+                        <span><a href="">애플</a></span>
+                    </div>
+                    <!-- //tag -->
+                </div>
+                <!-- //layer_box -->
+
+                <div class="layer_box">
+                    <dl class="master">
+                        <dt class="name">야크만 에셋 <span>(Yakman Assets)</span></dt>
+                        <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                        <dd class="img"><img src="../img/yakman_assets_ra.png" alt="야크만 에셋"></dd>
+                    </dl>
+                    <div class="spec_table">
+                        <dl>
+                            <dt class="th">편입종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">신규 매수 종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">10년 연평균 수익률</dt>
+                            <dd class="td decrease">-34.23%</dd>
+                        </dl>
+                    </div>
+                    <!-- //spec_table -->
+                    <div class="tag">
+                        <h3 class="title">대표종목</h3>
+                        <span><a href="">스타벅스</a></span>
+                        <span><a href="">애플</a></span>
+                        <span><a href="">스타벅스</a></span>
+                        <span><a href="">애플</a></span>
+                        <span><a href="">스타벅스</a></span>
+                        <span><a href="">애플</a></span>
+                    </div>
+                    <!-- //tag -->
+                </div>
+                <!-- //layer_box -->
+
+                <div class="layer_box">
+                    <dl class="master">
+                        <dt class="name">세스 클레먼 <span>(Seth Cleman)</span></dt>
+                        <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                        <dd class="img"><img src="../img/seth_cleman_ra.png" alt="세스 클레먼"></dd>
+                    </dl>
+                    <div class="spec_table">
+                        <dl>
+                            <dt class="th">편입종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">신규 매수 종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">10년 연평균 수익률</dt>
+                            <dd class="td increase">+34.23%</dd>
+                        </dl>
+                    </div>
+                    <!-- //spec_table -->
+                    <div class="tag">
+                        <h3 class="title">대표종목</h3>
+                        <span><a href="">스타벅스</a></span>
+                        <span><a href="">애플</a></span>
+                    </div>
+                    <!-- //tag -->
+                </div>
+                <!-- //layer_box -->
+
+                <div class="layer_box">
+                    <dl class="master">
+                        <dt class="name">빌 나이그렌 <span>(Bill Nigren)</span></dt>
+                        <dd class="sum">현존하는 최고의 투자대가현존하는 최고의 투자대가현존하는 최고의 투자대가</dd>
+                        <dd class="img"><img src="../img/bill_nigren_ra.png" alt="빌 나이그렌"></dd>
+                    </dl>
+                    <div class="spec_table">
+                        <dl>
+                            <dt class="th">편입종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">신규 매수 종목</dt>
+                            <dd class="td">88개</dd>
+                        </dl>
+                        <dl>
+                            <dt class="th">10년 연평균 수익률</dt>
+                            <dd class="td increase">+34.23%</dd>
+                        </dl>
+                    </div>
+                    <!-- //spec_table -->
+                    <div class="tag">
+                        <h3 class="title">대표종목</h3>
+                        <span><a href="">스타벅스</a></span>
+                        <span><a href="">애플</a></span>
+                    </div>
+                    <!-- //tag -->
+                </div>
+                <!-- //layer_box -->
+                <p class="dataLink">data from <a href="https://www.quandl.com/" target="_blank">Quandl and
+                        Sharadar</a>
+                </p>
+
+            </div>
+            <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>

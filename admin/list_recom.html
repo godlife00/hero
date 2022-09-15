@@ -1,0 +1,241 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>월가히어로</title>
+    <meta name="robots" content="월가히어로">
+    <meta name="description" content="페이지 설명">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="페이지 설명">
+    <!-- <meta property="og:image" content=""> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/globalstock.css" />
+    <!-- js -->
+    <script src="js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+    <!-- 월가히어로 사이트는 class="globalStock"로 css 구분 -->
+    <div id="wrap">
+        <div id="header">
+            <h1>데이타히어로</h1>
+            <span></span>
+        </div>
+        <!-- //header -->
+        <div id="container">
+            <!-- 주요 콘텐츠 -->
+            <div class="subDivision">
+                <!-- 월가히어로 좌측메뉴 -->
+                <div class="sta">
+                    <ul>
+                        <li class="home">월가히어로</li>
+                        <li>종목추천</li>
+                    </ul>
+                    <!-- // -->
+                </div>
+                <div class="admin_menu">
+                    <h2 class="title">월가히어로</h2>
+                    <ul class="menu">
+                        <li class="active"><a href="">종목추천</a></li>
+                        <li><a href="">종목분석</a></li>
+                        <li><a href="">탐구생활</a></li>
+                        <li><a href="">알림관리</a></li>
+                    </ul>
+                </div>
+                <!-- subLeft -->
+                <div class="admin_right">
+                    <div class="top_box">
+                        <fieldset class="list_form">
+                            <span class="label_txt">종목명</span>
+                            <input type="text" accesskey="s" title="제목" class="txt_input">
+                            <div class="item">
+                                <input name="recom" type="radio" value="" id="c1" class="i_radio" checked><label
+                                    for="c1">전체</label>
+                                <input name="recom" type="radio" value="" id="c2" class="i_radio"><label
+                                    for="c2">목표가도달</label>
+                                <input name="recom" type="radio" value="" id="c3" class="i_radio"><label
+                                    for="c3">손절가도달</label>
+                                <input name="recom" type="checkbox" value="" id="b1" class="i_check"><label
+                                    for="b1">미표출</label>
+                            </div>
+
+                            <button class="btn_reg">신규등록</button>
+                        </fieldset>
+                    </div>
+                    <!-- //top_box -->
+                    <div class="tableData">
+                        <table cellspacing="0" border="1" class="tableColtype board">
+                            <colgroup>
+                                <col width="60px">
+                                <col width="260px">
+                                <col width="120px">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="70px">
+                                <col width="80px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">no</th>
+                                    <th scope="col">종목명</th>
+                                    <th scope="col">현재가</th>
+                                    <th scope="col">목표가</th>
+                                    <th scope="col">목표가도달</th>
+                                    <th scope="col">손절가</th>
+                                    <th scope="col">손절가도달</th>
+                                    <th scope="col">표출날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="event">애플<span>(AAPL)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">2</td>
+                                    <td class="event">마이크로소프트<span>(MSFT)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">19.12/16</td>
+                                    <td class="day unexp">미표출</td><!-- 미표출 : class = unexp --->
+                                </tr>
+                                <tr>
+                                    <td class="num">3</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">4</td>
+                                    <td class="event">아디알 파마슈티컬스<span>(ADIL)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">5</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">6</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">7</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">8</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">9</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">10</td>
+                                    <td class="event">아마존닷컴<span>(AMZN)</span></td>
+                                    <td class="current">210.23 <span>+14.22%</span></td>
+                                    <td class="goal">118.23</td>
+                                    <td class="goal_day">19.12/16</td>
+                                    <td class="stopLoss">100.23</td>
+                                    <td class="stopLoss_day">-</td>
+                                    <td class="day">19. 12/15<br>12:23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //tableData -->
+
+                    <div class="paginate">
+                        <a href="#" class="cb_pre_end">맨앞</a>
+                        <a href="#" class="cb_pre">이전</a>
+                        <strong>1</strong>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#" class="cb_next">다음</a>
+                        <a href="#" class="cb_next_end">맨뒤</a>
+                    </div>
+
+                </div>
+                <!-- //subLeft -->
+
+            </div> <!-- //subDivision -->
+            <!-- 월가히어로 좌측메뉴 -->
+        </div>
+        <!-- //container -->
+
+        <div id="footer">
+
+        </div> <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
