@@ -1265,6 +1265,23 @@ table.tableRanking td {
 	background: #fff;
 }
 
+.globalStock .main_top .tabsArea_main h3.title {	
+	display: inline-block;
+    color: #333;
+    width: calc(100% - 40px);
+	padding: 25px 15px 15px;    
+    box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: normal;
+}
+
+.globalStock .main_top .tabsArea_main .title + .more {
+    display: inline-block;
+    width: 20px;
+    text-align: right;
+    padding-right: 15px;	
+}
+
 .globalStock .main_mid.master_area .title {
 	display: inline-block;
 	color: #333;
@@ -10910,6 +10927,16 @@ table.tableRanking td {
 }
 
 .panel .btm .panel_home img {
+	display: inline-block;
+	height: 18px;
+}
+
+.panel .menu .panel_home {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.panel .menu .panel_home img {
 	display: inline-block;
 	height: 18px;
 }
